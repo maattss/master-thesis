@@ -1,0 +1,32 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document}
+
+% The next for lines makes sure numbering in the appendix is correct - DO NOT CHANGE
+\renewcommand{\thesubsection}{A\arabic{subsection}}
+\renewcommand{\thetable}{A\arabic{subsection}.\arabic{table}}
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+%--------------------------------------------------------------
+\subsection{Alternative Games Categories and Characteristics}
+\label{appendix:complete_model}
+
+%\begin{table}[H]
+%    \begin{tabular}{lll}
+%    test & test & test \\
+%    test & test & test \\
+%    test & test & test
+%    \end{tabular}
+%    \caption{Alternative games characteristics and categories}
+%    \label{tab:alt_games_complete}
+%\end{table}
+
+\begin{table}[H]
+    \vspace*{-2\baselineskip}
+    \includegraphics[width=1\textwidth]{Images/Models/AllCharacteristics.pdf}
+    \vspace*{-2\baselineskip}
+    \caption{Alternative games characteristics and categories}
+    \label{tab:alt_games_complete}
+\end{table}
+
+\biblio % Needed for referencing to working when compiling individual subfiles - Do not remove
+\end{document}
