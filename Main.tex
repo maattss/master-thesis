@@ -25,7 +25,7 @@
     filecolor=black,
     menucolor=black,
     runcolor=black,
-    urlcolor=black
+    urlcolor=blue
     ]{hyperref}
 \counterwithin{table}{section} % numbering of tables 
 \counterwithin{figure}{section} % numbering of figures
@@ -38,7 +38,7 @@
 \usepackage{lipsum} % For generating dummy text
 \usepackage{csquotes}
 % --------- You can edit from this point on --------
-
+\usepackage{tabularx}
 
 % ----- Appearance and language ----- 
 \usepackage[english]{babel} % document language
@@ -193,7 +193,8 @@
 \addappheadtotoc
 
 \begin{appendices}
-    \subfile{Parts/Appendix}
+    \subfile{Parts/Appendices/Model}
+    \subfile{Parts/Appendices/PrivacyPolicy}
 \end{appendices}
 
 \end{document}
