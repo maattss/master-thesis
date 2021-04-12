@@ -3,30 +3,27 @@
 In this chapter, we discuss the methods used to collect data during the project’s testing phase.
 
 \subsection{Data Categories}
-In chapter \ref{chap:rqm} we briefly discussed our research goal and questions: these questions study player engagement, motivation, enjoyment, and habits. Consequently, we chose several methods for collecting data to answer these questions. The data we gather all speaks to the game’s social benefit because a player’s engagement, motivation, enjoyment, and habits affect the individual and affect the player’s surroundings.
+In Chapter \ref{chap:research_goal_and_questions} we briefly discussed our research goal and questions. These questions study player engagement, motivation, enjoyment, and habits. Consequently, we chose several methods for collecting data to answer these questions. The data we gather all speaks to the game’s social benefit because a player’s engagement, motivation, enjoyment, and habits affect the individual and affect the player’s surroundings.
 
 \textbf{Player engagement}\\
-Data about the player’s engagement was gathered to see how players engage in the game during the two weeks. For this data, it was interesting to see how game metrics and other players’ presence affect the player’s engagement in the app. This data coincides with RQ1 and RQ4.
+Data about the player’s engagement was gathered to see how players engage in the game during the two weeks. For this data, it was interesting to see how game metrics and other players’ presence affect the player’s engagement in the app. This data coincides with RQ1.
 
-\textbf{RQ1:} \textit{How do game metrics affect the players’ engagement in our game concept?}\\
-\textbf{RQ4:} \textit{How does social interaction affect the players’ engagement in our game concept?}
+\textbf{RQ1:} \textit{How do game design elements and social interaction affect the players’ engagement in our game concept?}
 
 \textbf{Player enjoyment}\\
-Data on player’s enjoyment was collected to investigate what makes the game enjoyable. Theory on what makes games enjoyable has been applied to the concept; hence, it was interesting to see how the game metrics affected the player’s enjoyment. Additionally, it was interesting to see how the game’s social aspects affect the player’s enjoyment. Data on player enjoyment will be used to reason about RQ2 and RQ5. 
+Data on player’s enjoyment was collected to investigate what makes the game enjoyable. Theory on what makes games enjoyable has been applied to the concept; hence, it was interesting to see how the game metrics affected the player’s enjoyment. Additionally, it was interesting to see how the game’s social aspects affect the player’s enjoyment. Data on player enjoyment will be used to reason about RQ2.
 
-\textbf{RQ2:} \textit{How do game metrics affect the players’ enjoyment in our game concept?} \\
-\textbf{RQ5:} \textit{How does social interaction affect the players’ enjoyment in our game concept?}
+\textbf{RQ2:} \textit{How do game design elements and social interaction affect the players’ enjoyment in our game concept?}
 
 \textbf{Player motivation}\\
-To collect data on the player’s motivation, we choose to investigate how the game metrics and presence of other players affect the player’s motivation and willingness to be active and do activities outside their home. The data collected on this matter lay the foundation for reasoning about RQ3 and RQ6.
+To collect data on the player’s motivation, we choose to investigate how the game metrics and presence of other players affect the player’s motivation and willingness to be active and do activities outside their home. The data collected on this matter lay the foundation for reasoning about RQ3.
 
-\textbf{RQ3:} \textit{How do game metrics affect the players’ motivation in our game concept?} \\
-\textbf{RQ6:} \textit{How does social interaction affect the players’ motivation in our game concept?}
+\textbf{RQ3:} \textit{How do game design elements and social interaction affect the players’ motivation in our game concept?} \\
 
 \textbf{Player habits}\\
-As the game aims to be socially beneficial, it is interesting to investigate how it affects the player’s habits of being active outside their home. Data on this matter relates to RQ7.
+As the game aims to be socially beneficial, it is interesting to investigate how it affects the player’s habits of being active outside their home. Data on this matter relates to RQ4.
 
-\textbf{RQ7:} \textit{How does the use of our game concept affect the players’ habits?}
+\textbf{RQ4:} \textit{How does the use of our game concept affect the players’ habits?}
 
 \subsection{Questionnaire}
 In order to collect quantitative data, the participants were asked to answer a questionnaire. The questionnaire included a set of questions and statements that lay the foundation to reason about our research questions. The participants were given the questions in Norwegian (see complete questionnaire in Appendix \ref{appendix:questionnaire}). The questionnaire comprised 32 statements and 26 questions grouped into five sections depending on what type of data they could reason about.
@@ -35,7 +32,6 @@ A five-point Likert scale was chosen for the statements, where the respondents h
 
 \textbf{General questions for the participant}\\
 To gather data about participant groups, we initially collected some demographic data and data on their overall experience and use of the game. Additionally, we ended the questionnaire with a general feedback field for collecting relevant data that the questionnaire did not cover, such as feedback on how the testing was conducted, the app, and the concept. These questions are found in Table \ref{tab:general_questions}.
-
 
 \begin{table}[H]
     \centering
@@ -77,7 +73,7 @@ The subjects were given six statements and six questions to collect data on the 
     \label{tab:player_engagement_statements}
 \end{table}
 
-Furthermore, we asked the subjects to quantify their use of the game and particular features. These questions can indicate how the metrics trigger players’ competitiveness and willingness to engage in the game. The questions on player engagement are presented in Table \ref{tab:player_engagement_questions}
+Furthermore, we asked the subjects to quantify their use of the game and particular features. These questions can indicate how the metrics trigger players’ competitiveness and willingness to engage in the game. The questions on player engagement are presented in Table \ref{tab:player_engagement_questions}.
 
 \begin{table}[H]
     \centering
@@ -218,7 +214,9 @@ To collect data from these interviews, we chose to take quick field notes. This 
 The observations of the user testing were not systematic observation, nor was it a typical participant observation. We found that the best way to observe the subjects was to participate during the testing passively. This presence allowed us to observe how the test subject played and interacted. The test subjects were informed beforehand of our passive participation. We chose the role of passive observers to not compromise the results. We refrained from creating challenges and reacting to activities so that the players would not feel pressured to play the game.
 
 \subsection{Application usage Analysis}
-\TODO
+To collect data on application usage, we added Google Analytics for Firebase to the game. This SDK captures several key events in the app that gives insight into user behavior. The toolkit also allows the configuration of custom events. These custom events let us capture events triggered by the players’ application usage. Examples of such events are; tracking what screens the players visit, how they interact, and how they respond to push notifications. The events also give insight into how players handle the “tracking” and “create new challenge” processes. This insight can indicate where in the process a player’s attention is lost.
+
+Additionally, some of the data can be directly gathered from the database. Examples include the number of activities the users choose to publish, the number of challenges they have participated in, and the number of likes given. These numbers can be used to support or invalidate the participants’ engagement in the testing period.
 
 \subsection{Ethics}
 Due to the need for user testing, we focused, throughout the project, on issues that could occur related to privacy. Therefore, it was important to be transparent with the participants with how we collect and present their data in the thesis.
@@ -226,7 +224,7 @@ It was a priority to develop the app to store as little as possible about the us
 
 As the project is dependent on user testing we started a dialogue with the Norwegian Centre for Research Data (NSD) to ensure that our research was completed in a secure, rightful, and ethical manner. This early adoption of communication resolved potential GDPR and privacy issues early on in the project’s phase.
 
-Before launching the game on App Store and Google Play, we saw the need for creating a privacy policy (see Appendix \ref{appendix:privacy_policy}) required by said platforms. The privacy policy discloses how, why, and what data we collect, and we made it available on our website and in the settings menu inside the application. 
+Before launching the game on App Store and Google Play, we saw the need for creating a privacy policy (see Appendix \ref{appendix:privacy_policy}) required by said platforms. The privacy policy discloses how, why, and what data we collect, and we made it available on our website and in the settings menu inside the application.
 
 \subsection{Summary}
 This chapter has described what data we collect and our methods for data collection. Four data sources were chosen in order to triangulate data. Each method explained what data we collect, how it is collected, and what it should answer. Last, we discussed some of the ethical issues encountered during this project. Part \ref{part:results} will use the methods presented in this chapter.
