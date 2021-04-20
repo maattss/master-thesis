@@ -1,2 +1,47 @@
 \section{Chosen Technologies}
 \label{chap:chosen_technologies}
+In this chapter, the tools we used to develop Hover and the process of selecting them will be presented.
+
+\subsection{Selection Process}
+Chapter \ref{chap:technology_review} gave an overview of relevant technology used as the basis for the selection process. There were essentially two main choices we needed to undertake: Decide which mobile application development approach and which backend solution we wanted to adopt.
+
+Our decision became to choose a cross-platform framework for developing the mobile application and a Backend as a Service (BaaS) solution for managing data, users, and analytics. Selecting a cross-platform framework for developing the mobile application was based on the opportunity to create a game that could target as many people as possible. Since the development time in the master’s thesis period is limited, a BaaS solution was chosen because of its simplicity.
+
+After choosing our mobile development and backend approach, we needed to select the specific tools we wanted to utilize. Three main evaluation criteria guided this process:
+
+\textbf{Support for required functionality:} The chosen tools needed to support the necessary functionality in Hover. Location tracking, map integration, and authentication are some of these requirements.
+
+\textbf{Previous experience:} Prior knowledge of a tool counted positive because it will increase the development speed. 
+
+\textbf{Maturity:} A tool that has been tested, experienced, and used in many applications is positive. It is also essential that the solution is undergoing active development and maintenance.
+
+Based on the selection criteria, selected React Native as a mobile application framework and a combination of Hasura and Firebase as BaaS providers were selected. 
+
+\subsection{React Native as Mobile Development Framework}
+React Native is a cross-platform framework developed by Facebook \citep{occhino_react_2015}. One of the main differences between React Native and other similar frameworks is its use of native components. A button declared in a React Native application will be presented as an Android-type button when the application is run on Android and an iOS-type button when it is used on iOS. Most other frameworks have a different approach where the application provides a common Android and iOS application experience. In this way, a React Native application feels more like a native application than other frameworks like Flutter and Ionic. 
+We decided to use React Native in combination with \href{https://expo.io}{Expo}. Expo is a set of tools that improves the building and deployment process of Android and iOS applications \citep{vatne_introduction_2021}. As described in the section above, we used three main evaluation criteria when choosing React Native as the mobile development framework:
+
+\textbf{Support for required functionality:} Libraries and support for the functionality we needed to develop Hover, including location tracking and map integration, exists in React Native.
+
+\textbf{Previous experience:} We do not have much experience with mobile application development, except for some limited experimentation and prototyping in conjunction with the technology review process. However, we have experience working with React, and this is a definite plus when developing using React Native.
+
+\textbf{Maturity:} React Native is a mature mobile development framework, and a handful of large companies uses it for their mobile applications. The framework is open-source and under active development and maintenance. Because React Native is based on React and JavaScript, the framework also has access to \href{https://www.npmjs.com}{NPM}’s extensive collection of packages of open-source code.
+
+Although we chose React Native as our development framework, other frameworks such as Flutter and Xamarin would presumably also have been great options. In summary, the decision was based on a combination of minor differences, where our previous experience with React was the deciding factor.
+
+\subsection{Combining Firebase and Hasura as BaaS}
+Combining Firebase and Hasura as BaaS
+Firebase is a Backend as a Service (BaaS) solution provided by Google \citep{tamplin_firebase_2014}, including tools for storage, analytics, cloud functions, authentication, and more. Its main selling point is simplicity for developing mobile applications.
+
+We could have used Firebase for all the back-end functionality but decided to use Hasura as a database instead of the storage solution found in Firebase. Hasura is a tool providing an instant \href{https://graphql.org}{GraphQL} API based on data in the database, removing the need to define schemas and resolvers manually. It also allows more flexibility in how the data is stored. Additionally, it integrates well with Firebase. The three main evaluation criteria were also used for this decision:
+
+\textbf{Support for required functionality:} Firebase has support for the backend tools needed to develop Hover, such as authentication and analytics.  Authentication will be used to verify users, while analytics will be used to see how they utilize the application during the test period. Hasura will be used to save game data.
+
+\textbf{Previous experience:} Firebase was the only BaaS we had some prior knowledge of. Thus, choosing this service over the other ones was relatively easy. Our experience with Hasura was minimal. However, we had some previous experience with GraphQL and \href{https://www.postgresql.org}{PostgreSQL}, two central parts of this specific storage setup.
+
+\textbf{Maturity:} Released back in 2011, Firebase was one of the first backend solutions explicitly designed to support mobile applications \citep{metz_firebase_2012}. \href{https://firebase.google.com}{Companies worldwide} use the solution, and it is consequently highly maintained and developed. Hasura is a relatively new tool, launched in 2017 \citep{hall_hasura_2018}. However, it is tested and used by multiple \href{https://hasura.io}{large companies} and has received a large number of stars on \href{https://github.com/hasura/graphql-engine}{GitHub}.
+
+In summary, it was our previous experience with Firebase that was the deciding factor for choosing it. Together with the added storage flexibility in Hasura, the combination seemed like the ideal choice for our purpose.
+
+\subsection{Summary}
+We have presented our chosen technologies for developing Hover. After discussions and a lot of research and experimentation, we decided on React Native with Hasura and Firebase. The next chapter will explain in more detail how the application was built.
