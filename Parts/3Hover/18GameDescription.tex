@@ -7,20 +7,22 @@ In this chapter, a descriptive overview and screenshots from the mobile applicat
     \includegraphics[width=0.6\textwidth]{Images/GameDescription/NavBar.png}
     \caption{Bottom navigation bar.}
     \label{fig:nav_bar}
+    \vspace*{-1\baselineskip}
 \end{figure}
 
 \subsection{Sign Up and Login}
 The first time a user opens the application, they are presented with a login screen as seen in Figure \ref{fig:login}. If the person does not have an account, they can navigate to the signup screen and create a new one. The user needs to select their chosen avatar, preferred username, and password to sign up. When they are satisfied with their selection, a new user is created by clicking the “Sign up” button, shown in Figure \ref{fig:signup}. The login and signup screens are both developed based on the first functional requirement (\textbf{FR1}), which states, \textit{“The user should be able to create an account and log in.”}
 
 \begin{figure}[H]
-    \begin{minipage}{.48\textwidth}
+    \centering
+    \begin{minipage}{0.4\textwidth}
         \centering
         \includegraphics[width=0.7\textwidth]{Images/GameDescription/LogIn.png}
         \caption{Login screen.}
         \label{fig:login}
     \end{minipage}
-    \hspace{0.5cm}
-    \begin{minipage}{.48\textwidth}
+    \hspace{0.02\textwidth}
+    \begin{minipage}{0.4\textwidth}
         \centering
         \includegraphics[width=0.7\textwidth]{Images/GameDescription/SignUp.png}
         \caption{"Sign up" screen.}
@@ -29,30 +31,67 @@ The first time a user opens the application, they are presented with a login scr
 \end{figure}
 
 \subsection{Feed}
+\begin{wrapfigure}{r}{0.45\textwidth}
+    \vspace*{-0.5\baselineskip}
+    \includegraphics[width=0.4\textwidth]{Images/GameDescription/Feed.png}
+    \centering
+    \caption{Feed screen.}
+    \label{fig:feed}
+    \vspace*{-1\baselineskip}
+\end{wrapfigure}
 
-% \begin{figure}
-%     \centering
-%     \caption{Caption}
-%     \label{fig:feed_achievement}
-% \end{figure}
+The feed is the first of five main screens. It is used to showcase posts of new activities, earned achievements, and completed challenges for all users in the application. A screenshot of the feed is shown in Figure \ref{fig:feed}. At the top, Conrad’s newly published activity, where he has been at “Studentersamfundet” in Trondheim together with Tomine, is shown. Below Bjørn’s new “1000 points in total,” bronze achievement is displayed. The bottom post announces Tarzan as the winner of a challenge against Kimmy, Herman, and Morten.
+
+The user can also show their tribute to elements in the feed by pressing the “clap emoji.” We see that in this figure, the user has reacted to Tarzan’s challenge win.
 
 \subsubsection{Notifications}
+A closer look at the top right corner of the feed screenshot (Figure \ref{fig:feed}) reveals a notification icon with a badge illustrating two new notifications. When pressing this button, the user will be directed to the notifications page. 
+
+As seen in Figure \ref{fig:notifications} this screen gives an overview of all notifications, where unread ones are listed at the top, and earlier ones are displayed below. Pressing the various items redirects the user to a specific part of the application relevant to the type of notification.
 
 \subsection{Challenge}
-
+\lipsum[1-3]
 % \begin{figure}
 %     \centering
 %     \caption{Caption}
 %     \label{fig:ongoing_challenge}
 % \end{figure}
 
-% \begin{figure}
-%     \centering
-%     \caption{Caption}
-%     \label{fig:create_challenge_flow}
-% \end{figure}
+\subsubsection{New Challenge}
+\begin{figure}[H]
+\centering
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=0.8\textwidth]{Images/GameDescription/ChallengeChooseOpponents.png}
+        \caption{Choose opponents} 
+        \label{fig:challenge_choose_opponents}
+        \vspace*{\baselineskip}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=0.8\textwidth]{Images/GameDescription/ChallengeType.png}
+        \caption{Choose challenge type} 
+        \label{fig:challenge_type}
+        \vspace*{\baselineskip}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=0.8\textwidth]{Images/GameDescription/ChallengeRules.png}
+        \caption{Define challenge rules} 
+        \label{fig:challenge_rules}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=0.8\textwidth]{Images/GameDescription/ChallengeOverview.png}
+        \caption{Challenge overview} 
+        \label{fig:challenge_overview}
+    \end{subfigure}
+   \caption{The process of creating a new challenge.} 
+   \label{fig:create_challenge_flow}
+\end{figure}
+\lipsum[4-6]
 
 \subsection{Hover}
+\lipsum[1-3]
 % \begin{figure}
 %     \centering
 %     \caption{Caption}
@@ -60,26 +99,41 @@ The first time a user opens the application, they are presented with a login scr
 % \end{figure}
 
 \subsection{Leaderboard}
-% \begin{figure}
-%     \centering
-%     \caption{Caption}
-%     \label{fig:leaderboard}
-% \end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.3\textwidth]{Images/GameDescription/Leaderboard.png}
+     \caption{The leaderboard}
+     \label{fig:leaderboard}
+ \end{figure}
+\lipsum[1-3]
 
 \subsection{Profile}
-
-% \begin{figure}
-%     \centering
-%     \caption{Caption}
-%     \label{fig:user_profile}
-% \end{figure}
-
-% \begin{figure}
-%     \centering
-%     \caption{Caption}
-%     \label{fig:achievemens_screen}
-% \end{figure}
+\begin{wrapfigure}{r}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{Images/GameDescription/FullProfile.png}
+    \caption{Caption}
+    \label{fig:profile}
+    \vspace*{-1\baselineskip}
+\end{wrapfigure}
+\lipsum[1-3]
+ 
+\subsubsection{Achievements}
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.3\textwidth]{Images/GameDescription/Achievements.png}
+ \caption{Caption}
+ \label{fig:achievemens_screen}
+\end{figure}
+\lipsum[1-3]
 
 \subsubsection{Settings}
+\begin{figure}[H]
+     \centering
+      \includegraphics[width=0.3\textwidth]{Images/GameDescription/Settings.png}
+     \caption{Caption}
+     \label{fig:achievemens_screen}
+\end{figure}
+\lipsum[1-3]
 
 \subsection{Summary}
