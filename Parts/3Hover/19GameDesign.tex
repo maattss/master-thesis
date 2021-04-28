@@ -18,24 +18,24 @@ In the leaderboard, players can see and compare their ranking in the game. The p
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{Images/GameDesign/leaderboard_element.png}
+    \includegraphics[width=0.8\textwidth]{Images/GameDesign/leaderboard_element.png}
     \caption{The leaderboard shows the ranking of the players based on their score.} 
     \label{fig:leaderboard_element}
 
 \end{figure}
 
-The scores are also visible on the players’ profiles. Figure \ref{fig:user_profile} in Chapter \ref{chap:game_description}, shows how the categories are used as score segments along with the total score. By dividing the categories into different score segments, players can see and compare the scores that matter to them. For instance, players that do not exercise or go to a university will not be particularly interested in these scores.
+The scores are also visible on the players’ profiles. Figure \ref{fig:profile} in Chapter \ref{chap:game_description}, shows how the categories are used as score segments along with the total score. By dividing the categories into different score segments, players can see and compare the scores that matter to them. For instance, players that do not exercise or go to a university will not be particularly interested in these scores.
 
 The point system also has a boosting feature that enables cooperation. Players can \textit{hover} together to get double points during their session. This feature can motivate players to do activities together, engage other players to play, and positively affect the player’s enjoyment. 
 
 The streak system is the second score system in Hover. It counts the number of days in a row that a player has been hovering and is independent from the player’s accumulated points. This particular score system builds on the player’s long-term commitment because the streak is lost if a player goes a day without hovering. The goal of the streak system is to encourage users to do something beneficial every day. The streaks are visible on the leaderboard next to the player’s name, as seen in Figure \ref{fig:leaderboard_element}. 
 
 \textbf{Achievement systems} \\
-Another important form of reward is achievement systems. In Hover, achievements are found on the players’ profile as badges (see Figure \ref{fig:user_profile}). The player’s effort has to meet certain requirements to earn achievements. The types implemented are \textit{score}, \textit{score in category}, and \textit{streak} achievements. In addition to these achievements, players are rewarded with a \textit{first activity} achievement to welcome their first published activity. The achievements are also weighted based on their difficulty. The color of the achievement implies its difficulty level; gold, silver, and bronze (see Figure \ref{fig:achievement_levels}). The difficulty levels are designed to be increasingly hard to get; for instance, \textit{score} achievements are weighted 1000 points for bronze, 5000 for silver, and 15000 for gold. 
+Another important form of reward is achievement systems. In Hover, achievements are found on the players’ profile as badges (see Figure \ref{fig:profile}). The player’s effort has to meet certain requirements to earn achievements. The types implemented are \textit{score}, \textit{score in category}, and \textit{streak} achievements. In addition to these achievements, players are rewarded with a \textit{first activity} achievement to welcome their first published activity. The achievements are also weighted based on their difficulty. The color of the achievement implies its difficulty level; gold, silver, and bronze (see Figure \ref{fig:achievement_levels}). The difficulty levels are designed to be increasingly hard to get; for instance, \textit{score} achievements are weighted 1000 points for bronze, 5000 for silver, and 15000 for gold. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Images/GameDesign/achievement_levels.png}
+    \includegraphics[width=0.7\textwidth]{Images/GameDesign/achievement_levels.png}
     \caption{The colors, bronze, silver, and gold, implies the achievement’s difficulty level.}
     \label{fig:achievement_levels}
 \end{figure}
@@ -48,21 +48,22 @@ The last types of reward implemented in Hover are feedback messages. Players are
 When players complete an activity or invite others to a challenge, they are prompted with feedback messages that appear as a confirmation message (see figures \ref{fig:feedback_activity} and \ref{fig:feedback_challenge}). The messages are decorated with emojis to make them more playful and positive.
  
 \begin{figure}[H]
-\centering
-    \begin{subfigure}[b]{0.50\linewidth}
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
         \includegraphics[width=\textwidth]{Images/GameDesign/feedback_activity.png}
         \caption{Activity feedback}
         \label{fig:feedback_activity}
     \end{subfigure}
     \quad
-    \begin{subfigure}[b]{0.44\linewidth}
+    \begin{subfigure}[b]{0.39\textwidth}
+        \centering
         \includegraphics[width=\textwidth]{Images/GameDesign/feedback_challenge.png}
         \caption{Challenge feedback} 
         \label{fig:feedback_challenge}
     \end{subfigure}
     \caption{Players are prompted with feedback messages}
 \end{figure}
- 
  
 \subsubsection{Design considerations}
 \citeauthor{wang_game_2011}’s article on reward systems presents seven design considerations when developing reward systems. Four of these are directly relevant to us during the development of Hover.
@@ -76,7 +77,7 @@ The three rewards systems in Hover facilitate three ways of advancing, as compar
 
 \begin{table}[H]
     \centering
-        \begin{tabularx}{\textwidth}{|l|X|X|} \hline
+        \begin{tabularx}{\textwidth}{|c|X|X|} \hline
         \cellcolor[HTML]{A4C2F4} & \cellcolor[HTML]{A4C2F4}\textbf{Volatile reward} & \cellcolor[HTML]{A4C2F4}\textbf{Non-volatile reward} \\ \hline
         \cellcolor[HTML]{A4C2F4}\textbf{Point system} & Leaderboard focuses on the \textit{Last 7 days}, and points are out  of focus after a week. & The player’s all-time points  are shown on their profile. Players can filter on pre-defined time intervals to find previous  scores on the leaderboard. \\ \hline
         \cellcolor[HTML]{A4C2F4}\textbf{Streak system} & Streaks are lost if a player goes a day without hovering. &  \\ \hline
@@ -98,14 +99,13 @@ Uncertainty and secrecy are necessary to impose curiosity in a game. In Hover, t
     \label{fig:unachieved_levels}
 \end{figure} 
 
-\newpage
 \textbf{Social purpose} \\
 The social aspect is crucial in Hover because it gives purpose to the points and the achievement. Players' social status is based on the accumulated rewards that are shared with other players. Points, streaks, progress, and achievements are visible in the feed, the leaderboard, the player profiles, and the ongoing challenges. This focus on social status enhances competitiveness and gives players incentive. The playing frequency revealed by the streak and the hard-to-get achievements distinguishes advanced and casual players. These types of rewards also serve as a symbol to increase unity between skilled players.
 
 \subsection{Player Types}
 The seven dimensions of player types found in \citet{hamari_player_2014} primarily focus on online games; however, the categories are still valid for gamification concepts like Hover. Hovers’ players will presumably have different interests and motivations for engaging in the game. Therefore, they will not be categorized as one player type but rather as a combination of the seven dimensions.
 
-According to \citet{hamari_player_2014}, the dimension of  \textit{achievement} focuses on single-oriented players. Achievers will likely be present in Hover because of the reward systems. The mechanisms used in these systems can motivate, track progress, allow accumulation of badges, and contribute to in-game status. \citet{yee_motivations_2007} suggested that achievers are likely to respond to game elements that measure the players’ performance, for instance, progress bars, streaks, leaderboards. In Hover, these measurable mechanics are implemented in the \textit{unachieved achievements} screen, the \textit{ongoing challenges} screen and the \textit{leaderboard} (see figures \ref{fig:leaderboard}, \ref{fig:achievemens_screen}, and \ref{fig:ongoing_challenge} in Chapter \ref{chap:game_description}).
+According to \citet{hamari_player_2014}, the dimension of  \textit{achievement} focuses on single-oriented players. Achievers will likely be present in Hover because of the reward systems. The mechanisms used in these systems can motivate, track progress, allow accumulation of badges, and contribute to in-game status. \citet{yee_motivations_2007} suggested that achievers are likely to respond to game elements that measure the players’ performance, for instance, progress bars, streaks, leaderboards. In Hover, these measurable mechanics are implemented in the \textit{unachieved achievements} screen, the \textit{ongoing challenges} screen and the \textit{leaderboard} (see figures \ref{fig:leaderboard}, \ref{fig:achievements}, and \ref{fig:challenge} in Chapter \ref{chap:game_description}).
     
 The \textit{sociability} dimension focuses on community-oriented players. Hover is a community-based game that facilitates social interaction through reactions, friend-tracking, and competing in challenges. Reactions are a social reward mechanism that gives socializers a reason to partake in the platform because it can motivate players, express support, and increase in-game status. Socializers often have an interest in viewing other players, and Hover enables this through the feed, the ongoing challenges, the leaderboard, and the player profiles. Viewing other players’ activities can also have a motivating effect and inspire them to do new interesting activities. 
 
@@ -120,9 +120,9 @@ To keep players engaged in Hover, the theory presented in Chapter \ref{chap:desi
 \citeauthor{malone_what_1980} presents three essential elements in his article: \textit{challenge}, \textit{fantasy}, and \textit{curiosity}. All of them are, to some degree, related to the reward system used in Hover.
 
 \textbf{Challenge} \\
-For a game to be enjoyable, appropriately designed challenges are necessary. As mentioned in the section describing reward systems earlier in this chapter, the game must balance difficulty and player experience. The in-game challenges in Hover should not be mistaken for Malone’s concept of challenge; however, the balance between difficulty and player experience is also a concern for the in-game challenges. Though players create the requirements for the in-game challenges, there are multiple ways to further embed challenge into it. For instance, ongoing challenges have both hidden information and a goal. Players do not precisely know their progress; however, the challenge description and the progress bar give the player a clear goal and an indication of their progress (see Figure \ref{fig:ongoing_challenge}). Hiding details and information like that gives uncertain outcomes. Plus, the challenge’s progress is not updated before the player publishes a new activity; therefore, players can not be entirely sure if they are leading a challenge.
+For a game to be enjoyable, appropriately designed challenges are necessary. As mentioned in the section describing reward systems earlier in this chapter, the game must balance difficulty and player experience in the score and achievement systems.
 
-In addition to the in-game challenges, there needs to be a balance in the score system and the achievements system, respectively, as previously mentioned. 
+Another aspect of the game, which is not mentioned in the reward systems section, is the importance of an appropriate degree of challenge in the “in-game challenges” where users can compete against each other. Since the creator can customize the in-game challenges, they can select an appropriate difficulty based on previous experience. Additionally, ongoing in-game challenges have hidden information and a goal. Players do not precisely know their progress. Instead, the description and the progress bar give the player a clear goal and indicate their progress (see Figure \ref{fig:challenge}). The progress is also not updated before the player publishes a new activity. Therefore, players cannot be entirely sure if they are leading the in-game challenge or not. Hiding details and information like that gives uncertain outcomes, which balances the difficulty. 
 
 \textbf{Fantasy} \\ 
 Fantasy in games makes them more appealing. In Hover, players have an avatar representing them. The avatars are randomly generated; however, players can regenerate until they find an avatar they like. Examples of avatars are illustrated in Figure \ref{fig:avatar_collage}. The avatar creates an extrinsic fantasy where players accumulate points for their avatar. 
@@ -156,7 +156,6 @@ For the representation system, progress bars are used to represent the progress 
     \end{subfigure}
    \caption{The progress bar is used as a representation system for time.}
 \end{figure}
-
 
 Furthermore, to start tracking players have to be located within a geofence. To indicate that tracking is restricted to valid hover-zones, gray and green buttons are used to indicate whether this functionality is disabled or not. 
 
@@ -211,11 +210,10 @@ Moreover, the concept of clear goals is also used for the challenges. All challe
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\textwidth]{Images/GameDesign/push_notifications.png}
+    \includegraphics[width=0.45\textwidth]{Images/GameDesign/push_notifications.png}
     \caption{Examples of push notification used in Hover.}
     \label{fig:push_notification}
 \end{figure}
-
 
 \textbf{Feedback} \\
 As briefly described in the reward system section, feedback is vital as a reward. Moreover, \citeauthor{sweetser_gameflow_2005} also suggests that feedback is important to improve player enjoyment. In Hover, players can always see their score and progress, both while they are tracking and not tracking.
