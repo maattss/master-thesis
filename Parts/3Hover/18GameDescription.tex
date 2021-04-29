@@ -1,17 +1,17 @@
 \section{Game Description}
 \label{chap:game_description}
-In this chapter, a descriptive overview and screenshots from the mobile application will be presented. Figure \ref{fig:nav_bar} shows the bottom navigation bar in Hover, displaying the five main screens: Feed, Challenge, Hover, Leaderboard, and Profile. Additionally, there are signup and login screens in which unauthenticated users are faced when they open the application. We will start by describing the signup and login screens before continuing with the description of the five main screens.
+In this chapter, a descriptive overview and screenshots from the mobile application will be presented. Figure \ref{fig:nav_bar} shows the bottom navigation bar in Hover, displaying the five main screens: \textit{Feed}, \textit{Challenge}, \textit{Hover}, \textit{Leaderboard}, and \textit{Profile}. Additionally, there are signup and login screens which unauthenticated users are faced with when they open the application. We will start by describing the signup and login screens before continuing with the description of the five main screens.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/GameDescription/NavBar.png}
-    \caption{Bottom navigation bar.}
+    \caption{Bottom navigation bar in Hover.}
     \label{fig:nav_bar}
     \vspace*{-1.5\baselineskip}
 \end{figure}
 
 \subsection{Sign Up and Login}
-The first time a user opens the application, they are presented with a login screen as seen in Figure \ref{fig:login}. If the person does not have an account, they can navigate to the signup screen and create a new one. The user needs to select their chosen avatar, preferred username, and password to sign up. When they are satisfied with their selection, a new user is created by clicking the “Sign up” button, shown in Figure \ref{fig:signup}.
+The first time a user opens the application, they are presented with a login screen as seen in Figure \ref{fig:login}. If the person does not have an account, they can navigate to the signup screen and create a new one. The user needs to select their chosen avatar, preferred username, and password to sign up. When they are satisfied with their selection, a new user is created by pressing the “Sign up” button, shown in Figure \ref{fig:signup}.
 
 \begin{figure}[H]
     \centering
@@ -25,7 +25,7 @@ The first time a user opens the application, they are presented with a login scr
     \begin{minipage}{0.4\textwidth}
         \centering
         \includegraphics[width=0.8\textwidth]{Images/GameDescription/SignUp.png}
-        \caption{"Sign up" screen.}
+        \caption{Sign up screen.}
         \label{fig:signup}
     \end{minipage}
     \vspace*{-2\baselineskip}
@@ -39,10 +39,9 @@ The first time a user opens the application, they are presented with a login scr
     \label{fig:feed}    
     \vspace{0.5\baselineskip}
     \includegraphics[width=0.8\linewidth, center]{Images/GameDescription/Notifications.png}
-    \caption{Notification screen.}
+    \caption{Notifications screen.}
     \label{fig:notifications}
 \end{wrapfigure}
-
 
 The feed is the first of five main screens. It is used to showcase posts of new activities, earned achievements, and completed challenges for all users in the application. A screenshot of the feed is shown in Figure \ref{fig:feed}. At the top, Conrad’s newly published activity, where he has been at “Studentersamfundet” in Trondheim together with Tomine, is shown. Below Bjørn’s new “1000 points in total,” bronze achievement is displayed. The bottom post announces Tarzan as the winner of a challenge against Kimmy, Herman, and Morten.
 
@@ -59,12 +58,12 @@ A closer look at the top right corner of the feed screenshot (Figure \ref{fig:fe
     \caption{Challenge screen.}
     \label{fig:challenge}
 \end{wrapfigure}
-The challenge screen allows players to see their challenge progress, pending invites, and create new challenges. A challenge is a user-defined competition between two or more players where the goal is to meet a set of requirements before a specified date.  An example is the \textit{score in category} challenge, where the goal is to get a specified amount of points, in a specific category, before a chosen date determined by the creator. 
+The challenge screen allows players to see their challenge progress, pending invites, and create new challenges. A challenge is a user-defined competition between two or more players where the goal is to meet a set of requirements before a specified date.  An example is the \textit{score in category} challenge, where the goal is to get a specified amount of points, in a specific category, before a chosen date, determined by the creator. 
 
 Figure \ref{fig:challenge} shows an example of how the challenge screen may look. In this screen, players can see the challenges they are invited to and the ones they are currently participating in. Both the pending invites and the ongoing challenges include a description of the challenge rules. 
 
 \subsubsection{Create a New Challenge}
-As mentioned above, players can create new challenges. Figure \ref{fig:create_challenge_flow} illustrate this process. The first step is to choose one or more opponents, as seen in Figure \ref{fig:challenge_choose_opponents}. Next, the type of challenge is selected (Figure \ref{fig:challenge_type}). Then the challenge rules are set before an overview is presented and the process is completed (figures \ref{fig:challenge_rules} and \ref{fig:challenge_overview}). When pressing the “Create challenge” button, the challenged users will get a new notification to let them know they have been invited.
+As mentioned above, players can create new challenges. Figure \ref{fig:create_challenge_flow} illustrate this process. The first step is to choose one or more opponents, as seen in Figure \ref{fig:challenge_choose_opponents}. Next, the type of challenge is selected (Figure \ref{fig:challenge_type}). Then the challenge rules are set, before an overview is presented and the process is completed (figures \ref{fig:challenge_rules} and \ref{fig:challenge_overview}). When pressing the “Create challenge” button, the challenged users will get a new notification to let them know they have been invited.
 
 \begin{figure}[ht]
     \centering
@@ -104,7 +103,7 @@ As mentioned above, players can create new challenges. Figure \ref{fig:create_ch
 \clearpage
 
 \subsection{Hover}
-The third main screen in the application incorporates Hover’s central game functionality. Here, the user can see geofence zones (also known as Hover zones), track activities, and publish them. We use the word \textit{hovering} as a name for the tracking functionality to create a more authentic game experience. Figure \ref{fig:tracking_flow} presents the three potential Hover screens. The first one shows the initial screen (\ref{fig:tracking_explore}) where the user can pan and zoom to explore potential Hover zones. When inside a valid zone (as seen in the figure), the start button will be green, and the user can start hovering. Figure \ref{fig:tracking_ongoing} shows how the Hover screen is presented during that session. In this example, the user is also hovering together with a friend, a game feature that enables the possibility to earn double points. To start a “Hover with friend” session, the player exchanges a generated code with another player when they are inside the same zone. The codes are composed of a color and animal name (e.g., “silver donkey”), making them easy to understand and share. Both players will then earn double points during this session.
+The third main screen in the application incorporates Hover’s central game functionality. Here, the user can see geofence zones (also known as “Hover zones”) and track activities. We use the word \textit{hover} or \textit{hovering} as a name for the tracking functionality to create a more authentic game experience. Figure \ref{fig:tracking_flow} presents the three potential Hover screens. The first one shows the initial screen (\ref{fig:tracking_explore}) where the user can pan and zoom to explore potential Hover zones. When inside a valid zone (as seen in the figure), the start button will be green, and the user can start hovering. Figure \ref{fig:tracking_ongoing} shows how the Hover screen is presented during that session. In this example, the user is also hovering together with a friend, a game feature that enables the possibility to earn double points. To start a “Hover with friend” session, the player exchanges a generated code with another player when they are inside the same zone. The codes are composed of a color and animal name (e.g., “silver donkey”), making them easy to understand and share. Both players will then earn double points during this session.
 
 \begin{figure}[H]
     \centering
@@ -112,7 +111,7 @@ The third main screen in the application incorporates Hover’s central game fun
     \begin{subfigure}[t]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Images/GameDescription/Explore.png}
-        \caption{Explore screen where the user can view all Hover zones.} 
+        \caption{Explore page.} 
         \label{fig:tracking_explore}
     \end{subfigure}
     \quad
@@ -126,23 +125,23 @@ The third main screen in the application incorporates Hover’s central game fun
     \begin{subfigure}[t]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Images/GameDescription/Publish.png}
-        \caption{Publishing a Hover session.} 
+        \caption{Publishing Hover session.} 
         \label{fig:tracking_publish}
     \end{subfigure}
-    \caption{The tracking flow.} 
+    \caption{Hover screen} 
     \label{fig:tracking_flow}
 \end{figure}
 
 \clearpage
 
-When the user is ready to publish the activity, the stop button is pressed. A new publish page, as seen in Figure \ref{fig:tracking_publish}, is then presented. A summary of the activity, displaying earned points and other information, is shown. The user is also able to add a caption to customize their post, writing something funny or further described what they did. When the user presses publish, the activity is processed and viewable in the feed for all application users.
+When the user is ready to publish the activity, the stop button is pressed. A new publish page, as seen in Figure \ref{fig:tracking_publish}, is then presented. A summary of the activity, displaying earned points and other information, is shown. The user is also able to add a caption to customize their post, writing something funny or further described what they did. When the user presses publish, the activity is processed and viewable in the feed for all users.
 
 \subsection{Leaderboard}
 The leaderboard introduces the ability for the users to compare themselves against others. Figure \ref{fig:leaderboard} shows an example where the top 10 players are listed. The leaderboard can be filtered by both time and category, depending on the user’s interest. Streaks, illustrating the number of days in a row a user has published an activity, are also displayed. Additionally, the rows in the list can also be pressed to navigate to that player’s profile.
 
 \begin{figure}[H]
     \includegraphics[width=0.4\textwidth, center]{Images/GameDescription/Leaderboard.png}
-    \caption{The leaderboard.}
+    \caption{Leaderboard screen.}
     \label{fig:leaderboard}
 \end{figure}
 \clearpage
@@ -166,7 +165,7 @@ Achievements displays all earned achievements, with the newest one on the left. 
 \begin{wrapfigure}{r}{0.4\textwidth}
     \vspace{-1.8\baselineskip}
     \includegraphics[width=0.7\linewidth, center]{Images/GameDescription/Achievements.png}
-    \caption{Achievements.}
+    \caption{Achievements page.}
     \label{fig:achievements}
 \end{wrapfigure}
 
@@ -175,7 +174,7 @@ Below achievements, the user’s score is displayed. The overview consists of po
 \clearpage
 
 \subsubsection{Settings}
-In the top right corner of Figure \ref{fig:profile}, there is a button for navigating to the settings in the application. As seen in Figure \ref{fig:settings}, the screen includes various less important functions such as edit their profile (name, avatar, and biography), suggest a new location, give feedback or read legal information.
+In the top right corner of Figure \ref{fig:profile}, there is a button for navigating to the settings in the application. As seen in Figure \ref{fig:settings}, the screen includes various less important functions such as edit profile (name, avatar, and biography), suggest new location, give feedback or read legal information.
 
 \begin{figure}[H]
     \includegraphics[width=0.4\linewidth, center]{Images/GameDescription/Settings.png}
