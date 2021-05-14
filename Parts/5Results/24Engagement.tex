@@ -1,11 +1,11 @@
 \section{Player Engagement}
 \label{chap:player_engagement}
+This chapter presents the data from the survey relevant to the player’s engagement in Hover. The results seek to answer \textit{RQ2: “How do game design elements and social interaction affect the players’ engagement in our game concept?”}. Described data will be used in Chapter \ref{chap:discussion} to discuss and evaluate the result of this research question.
 
-
+Player engagement results are best expressed in numbers and figures, describing how and what mechanisms engage the players. Thus, the chapter is primarily based on quantitative data from the questionnaire and usage data from the application gathered from the database and Google Analytics.
 
 \subsection{Questionnaire}
-
-
+Table \ref{tab:statements_engagemet_answers} shows responses from the questionnaire’s section on engagement, where the participants were asked to take a stand on six statements. Though the statements in the questionnaire were originally a 5-point Likert scale (strongly disagree, disagree, neutral, agree, and strongly agree), we have synthesized these into a 3-point Likert scale for readability (disagree, neutral, and agree). The questionnaire included statements about rewards, curiosity,  challenge, and activity level to investigate the player’s engagement.
 
 \begin{table}[H]
     \centering
@@ -25,21 +25,30 @@
     \vspace*{-\baselineskip}
 \end{table}
 
+ Additionally, average answers from both research groups, the student society (Avg S) and the classmates (Avg C), are presented. The average is calculated using responses weighted according to the original 5-point Likert scale, where strongly disagree equals 1 and strongly agreed is 5.
 
+The responses to the statements were broadly distributed with both positive and negative results. Answers from S2 revealed that 52.7\% agreed that they continually got new achievements and rewards during the test period. New achievements increase the incentive for playing and thus are positive for player engagement. Challenges between friends also seemed to have a positive impact on the engagement with 57.9\% (S4) answering that it made them use the application more. In addition to this, almost half of the respondents answered in S6 that notifications made them use the application more. 
+
+On the other hand, answers from S1, S3, and S5 were more on the negative side of the spectrum. 47.4\% (S1) disagreed that they were curious about which achievements they could earn in the game. In S3, 57.9\% of the participants answered that the game was not challenging enough. At last, answers from S5 reported that many of the users did not use reactions to a large degree.
+
+The averages for the two groups revealed that the classmates generally agreed to the statements more than the student society group. All statements except S5 had a higher average for the group of classmates.
+
+The participants were also asked to answer how many days during the test period they used Hover (Q10). The responses from the two groups are illustrated in Figure \ref{fig:engagement_perceived_usage}. Most of the respondents stated that they used Hover \textit{a couple of days each week}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Images/Results/Engagement/PerceivedUsageOfTheApp.png}
-    \caption{The perceived usage of Hover is relatively equal between the two groups. }
+    \caption{The perceived usage of Hover.}
     \label{fig:engagement_perceived_usage}
 \end{figure}
 
+Table \ref{tab:engagement_questions} combines the responses from Q11-14. Columns \textit{Avg S} and \textit{Avg C} show the calculated average for the two groups, and \textit{Avg All} shows the average for the entire test group. Out of the four questions, Q14 is the only question where the two groups significantly differed. The student society group stated that they gave an average of 2.23 reactions, whereas the classmates had an average of 0.59 reactions. However, both numbers are low.
 
 \begin{table}[H]
     \centering
     \begin{tabularx}{\textwidth}{|c|X|c|c|c|c|}
         \hline
-        & \multicolumn{1}{c|}{\textbf{Questions}}  & \multicolumn{1}{c|}{\textbf{Avg S}} & \multicolumn{1}{c|}{\textbf{Avg C}}  & \multicolumn{1}{c|}{\textbf{All}} & \\ \hline
+        & \multicolumn{1}{c|}{\textbf{Questions}}  & \multicolumn{1}{c|}{\textbf{Avg S}} & \multicolumn{1}{c|}{\textbf{Avg C}}  & \multicolumn{1}{c|}{\textbf{Avg All}} & \multicolumn{1}{c|}{\textbf{Unit}} \\ \hline
         \textbf{Q11} & On average, how long (number of minutes) did you use Hover every day during the test period? & 5.73 & 4.29 & 5.2 & minutes \\
         \textbf{Q12} & How many times during the test period did you accept a challenge from friends? & 1.25 & 1.43 & 1.32 & times \\
         \textbf{Q13} & How many times during the test period did you challenge friends? & 0.42 & 0.43 & 0.42 & times \\
@@ -51,61 +60,82 @@
     \vspace*{-\baselineskip}
 \end{table}
 
+In the questionnaire, respondents were given an option to leave additional comments regarding their perceived engagement. One participant wrote that they appreciated the push notification that reminded them to hover when they entered a Hover zone.
 
+\textit{“It’s very nice that you get push alerts when you are in a zone where you can use Hover.”\footnotemark}
 
+Another participant was not aware of this feature, likely because they did not provide appropriate permissions to the application. However, the player states that such a feature would have made them play the game more. 
 
+\textit{“I think I would have used the app more if I had been notified when I was within a zone.”\footnotemark[\value{footnote}]}
 
-
-
-
+\footnotetext{Translated from Norwegian}
 
 \subsection{Application Usage Data}
+Data from Firebase Analytics and the database reveals how the players have engaged in the game during the two weeks of testing. The usage data also presents the most used features in the application. 
 
+Figure \ref{fig:engagement_daily_users} shows the number of daily users. Meaning the number of users that have opened the application at least once during that day. The data shows a clear tendency that the number of active users was decreasing during the testing period. Day 1 being the peek, and day 13 the lowest point. Both Mondays, days 1 and 8, are the peeks of their respective weeks. Another tendency seems to be that there are fewer active users during the weekends (days 6, 7, and 13). Additionally, it appears to be a correlation between the number of active users and the number of published activities, with day 6 and 14 being the exceptions. The spike on day 14 was likely due to the distribution of the questionnaire that day. 
 
 \begin{figure}[H]
+    \vspace*{-\baselineskip}
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/NumberOfDailyUsers.png}
+    \includegraphics[width=0.95\textwidth]{Images/Results/Engagement/NumberOfDailyUsers.png}
     \caption{The number of daily users during the 14 days of testing. }
     \label{fig:engagement_daily_users}
+    \vspace*{-\baselineskip}
 \end{figure}
+
+Figure \ref{fig:engagement_actvities_weekly} shows how many activities were published during the two weeks of testing. The figure reveals that users were more eager to hover during the first week. Both of the weeks have in common that Monday has a higher number of activities published. Other than the peek on Mondays, the graphs show that the number of activities decreased through the period. Consequently, there seems to be a correlation between the number of active users and published activities.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/ActivitiesPublishedWeekly.png}
+    \includegraphics[width=0.85\textwidth]{Images/Results/Engagement/ActivitiesPublishedWeekly.png}
     \caption{A comparison of the activity level between the two weeks. }
-\label{fig:engagement_actvities_weekly}
+    \label{fig:engagement_actvities_weekly}
+    \vspace*{-\baselineskip}
 \end{figure}
 
+Google Analytics allowed us to identify what parts of the application the users spent their \textit{active time}. Active time describes an application state where it is foregrounded and the screen is unlocked. Figure \ref{fig:engagement_screens} shows what screens the users engage in. From the numbers, it is clear that the \textit{feed}, the \textit{tracking} screen, and the \textit{leaderboard} were the screens that the users spent the most time.
 
 \begin{figure}[H]
+\vspace*{-\baselineskip}
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/WhereDidUsersEngage.png}
+    \includegraphics[width=0.85\textwidth]{Images/Results/Engagement/WhereDidUsersEngage.png}
     \caption{A pie chart of the most used screens.}
     \label{fig:engagement_screens}
+    \vspace*{-\baselineskip}
 \end{figure}
 
+\textbf{Activities} \\
+The next figure, Figure \ref{fig:engagement_tracking_events} shows the different events recorded by Google Analytics while tracking (hovering). The “Start tracking” event reveals that the players started hovering a total of 141 times during the test period. Out of these, 116 were published, 19 discarded, and 6 lost. 
+
 \begin{figure}[H]
+    \vspace*{-\baselineskip}
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/TrackingEvents.png}
+    \includegraphics[width=0.65\textwidth]{Images/Results/Engagement/TrackingEvents.png}
     \caption{The tracking events recorded by Google Analytics.}
     \label{fig:engagement_tracking_events}
+    \vspace*{-\baselineskip}
 \end{figure}
+
+Of the 116 activities published, 69.0\% were completed by the participants at the student society and 31.0\%  by the classmates (see Figure \ref{fig:engagement_actvities_per_group}). Since the participants at the student society make 63.0\% of the total test population, this difference is expected.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Results/Engagement/ActivitiesPerGroup.png}
-    \caption{A pie chart showing the number of activities published by the two groups.}
+    \caption{The number of activities published by the two groups.}
     \label{fig:engagement_actvities_per_group}
 \end{figure}
 
+Figure \ref{fig:engagement_actvities_per_user} shows the distribution of activities published per user. The bar chart shows that all but one user have performed between 2 and 8 activities each. The number of activities performed by user 1 deviates from the rest of the data set, with a peeking number of 24 activities. This deviation is significant as it increases the average number of activities among the Student society group from 5.09 to 6.67.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/ActivitiesPerUser.png}
-    \caption{A bar chart showing the number of activities published by each participant.}
+    \includegraphics[width=0.9\textwidth]{Images/Results/Engagement/ActivitiesPerUser.png}
+    \caption{The number of activities published by each participant.}
     \label{fig:engagement_actvities_per_user}
 \end{figure}
 
-
+Table \ref{tab:engagement_friend_tracking} reveals how the friend tracking feature has been used. 43 of the 116 activities published utilized friend tracking, which makes 37.1\% of all activities. 14 out of 19 participants used the feature at least once, where the student society group used it more frequently than the classmates, with an average of 2.67 times per participant.
 
 \begin{table}[H]
     \centering
@@ -118,79 +148,101 @@
         Average use per participant & 2.67 & 1.57 & 2.26 \\
         \hline
     \end{tabularx}
-    \caption{Numbers describing the participants’ use of Hover’s friend tracking feature.}
+    \caption{The participants’ use of Hover’s friend tracking feature.}
     \label{tab:engagement_friend_tracking}
-    \vspace*{-\baselineskip}
 \end{table}
 
+\textbf{Locations} \\
+Figure \ref{fig:engagement_hover_zones} show the hover zones used. The users visited only five locations, even though there were 46 hover locations in the Trondheim region. Out of the five locations, NTNU Gløshaugen and the Student Society in Trondheim were the most visited zones.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/Results/Engagement/HoverZoneFrequency.png}
+    \includegraphics[width=0.75\textwidth]{Images/Results/Engagement/HoverZoneFrequency.png}
     \caption{The hover zones used.}
     \label{fig:engagement_hover_zones}
+    \vspace*{-\baselineskip}
 \end{figure}
+
+Between the two groups, there is also a difference in where they have been hovering. Figure \ref{fig:engagement_categories_used} reveals that the student society group published all of the activities in the cultural zones. Both groups have used the education and exercise zones, and none of them used the social category.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/LocationCategoriesUsed.png}
-    \caption{The difference in what location categories the groups used.}
+    \includegraphics[width=0.8\textwidth]{Images/Results/Engagement/LocationCategoriesUsed.png}
+    \caption{The difference in locations used by the two groups.}
     \label{fig:engagement_categories_used}
+    \vspace*{-\baselineskip}
+\end{figure}
+
+Figure \ref{fig:engagement_duration_in_category} shows the average time the participants have spent hovering in each category. The student society group had an average of 10 hours and 52 minutes, whereas the classmates had an average of 10 hours and 14 minutes. The groups spent most of their time in the culture category and educational category
+
+\textbf{Score} \\
+Figure \ref{fig:engagement_points_in_category} shows the average score in each category for the participants in the two groups. The average in the student society was more than 3 three times the average of the classmates. Figure \ref{fig:engagement_duration_in_category} revealed that the average time spent hovering was approximately the same for the two groups. Thus, the noticeable difference in average score was influenced by something else than time spent hovering. One apparent reason is that cultural activities get five times the points of educational activities, hence impacting the total score. Another reason is that the student society used the friend tracking feature more than the classmates, resulting in more frequent double points (see Table \ref{tab:engagement_friend_tracking}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Results/Engagement/AverageDurationInCategories.png}
+    \caption{Average time spent hovering in the four categories.}
+    \label{fig:engagement_duration_in_category}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/AverageDurationInCategories.png}
-    \caption{ A bar chart of the average time spent hovering in the four categories.}
-    \label{fig:engagement_ duration_in_category}
+    \includegraphics[width=0.85\textwidth]{Images/Results/Engagement/AverageScoreInCategories.png}
+    \caption{Average score for the two groups in each category.}
+    \label{fig:engagement_points_in_category}
 \end{figure}
+
+\textbf{Achievements} \\
+In the next figure (Figure \ref{fig:engagement_achievement_earned}), achievements earned by the participants are presented. The color of the bar symbolizes the difficulty level of the achievement. They are also grouped according to their type. Due to the design of the achievement system, it is naturally an abundance of bronze achievements and a low number of gold achievements. Since all players have earned two or more achievements, all 19 players have received the \textit{First activity} achievement, and 15 players have accumulated 1000 points or more. Out of the four \textit{points-in-category} achievements, the cultural category has been awarded to the highest number of players.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/AverageScoreInCategories.png}
-    \caption{A bar chart of the average score for the two groups in each category.}
-    \label{fig:engagement_points_in category}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/EarnedAchievements.png}
-    \caption{A bar chart showing the number and types of achievements earned.}
+    \includegraphics[width=0.95\textwidth]{Images/Results/Engagement/EarnedAchievements.png}
+    \caption{The number and types of achievements earned.}
     \label{fig:engagement_achievement_earned}
 \end{figure}
 
+The number of achievements earned by the two groups (Figure \ref{fig:engagement_achievement_per_group} shows a considerable difference, where the student society group earned almost three times as many achievements as the group of classmates. This difference seems reasonable for two reasons. First, the student society accumulated 6.4 times the amount points of the classmates, as revealed in Figure \ref{fig:engagement_points_in_category}. Secondly, 15 of the 19 rewards are to some degree determined by the player’s points.
 
 \begin{figure}[H]
+    \vspace*{-1.5\baselineskip}
     \centering
-    \includegraphics[width=0.7\textwidth]{Images/Results/Engagement/AchievmentsEarnedPerGroup.png}
-    \caption{A bar chart showing the number of achievements earned by the two groups.}
+    \includegraphics[width=0.55\textwidth]{Images/Results/Engagement/AchievmentsEarnedPerGroup.png}
+    \caption{The number of achievements earned by the two groups.}
     \label{fig:engagement_achievement_per_group}
 \end{figure}
 
+\textbf{Challenges} \\
+Figure \ref{fig:engagement_created_challenges} shows the seven challenges created in the testing period. We observed that only three challenges were started during the first week of testing and that these only engaged four unique players. To ensure that all participants were familiar with the in-game challenges, we created three challenges in the beginning of the second week. Two of the challenges were created for the student society and one for the classmates group. However, the challenges did not enhance the players’ engagement, with many either ignoring or declining the invites, especially in the student society group.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Images/Results/Engagement/ChallengeParticipation.png}
-    \caption{A stacked bar chart showing the number of participants for each challenge.}
+    \caption{The number of participants for each challenge.}
     \label{fig:engagement_created_challenges}
-
+    \vspace*{-\baselineskip}
 \end{figure}
 
-
-\begin{figure}[H]
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{\baselineskip}
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/Results/Engagement/ReactionsPerGroup.png}
-    \caption{A pie chart showing the difference in reactions given by the two groups .}
+    \includegraphics[width=0.45\textwidth]{Images/Results/Engagement/ReactionsPerGroup.png}
+    \caption{The difference in reactions given by the two groups.}
     \label{fig:engagement_reactions_per_group}
-\end{figure}
+    \vspace*{-\baselineskip}
+\end{wrapfigure}
 
+\textbf{Reactions} \\
+The reactions given by the users are shown in Figure \ref{fig:engagement_reactions_per_group}. The student society group accounted for 89.2\% of the reactions, while the group of classmates generated 10.8\%. The student society group is larger than the group of classmates, and naturally they represent a larger number of the given reactions. However, the average number of reactions given by the two groups shows that the student society group gave reactions more frequently (see Figure \ref{fig:engagement_reactions_per_user}).
+
+Figure \ref{fig:engagement_reactions_per_user} show the average number of reactions given by each user. The student society group gave 4.8 reactions per participant, and the classmates gave 1 reaction per participant. The blue and red linear graphs in the figure are the averages. There were six users, three from each group, that did not react to any posts at all. Additionally, there was one user (1) that used the reaction feature significantly more than any other participant, reacting to a total of 25 posts. This outlier increased the average result per user in the student society group from 3.0 to 4.8. Even if we ignore the outlier, the student society reacted to three times as many posts as the classmates.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Images/Results/Engagement/ReactionsPerUser.png}
+    \includegraphics[width=0.95\textwidth]{Images/Results/Engagement/ReactionsPerUser.png}
     \caption{A bar chart showing the number of reactions given by each user.}
     \label{fig:engagement_reactions_per_user}
 \end{figure}
 
 \subsection{Summary}
+This chapter described results relevant to RQ2, based on data collected from the questionnaire and the application. The next chapter presents results related to the next research question (RQ3), describing the players’ motivation.
