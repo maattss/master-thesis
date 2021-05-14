@@ -5,7 +5,7 @@ This chapter presents the data from the survey relevant to the player’s engage
 Player engagement results are best expressed in numbers and figures, describing how and what mechanisms engage the players. Thus, the chapter is primarily based on quantitative data from the questionnaire and usage data from the application gathered from the database and Google Analytics.
 
 \subsection{Questionnaire}
-Table \ref{tab:statements_engagemet_answers} shows responses from the questionnaire’s section on engagement, where the participants were asked to take a stand on six statements. Though the statements in the questionnaire were originally a 5-point Likert scale (strongly disagree, disagree, neutral, agree, and strongly agree), we have synthesized these into a 3-point Likert scale for readability (disagree, neutral, and agree). The questionnaire included statements about rewards, curiosity,  challenge, and activity level to investigate the player’s engagement.
+Table \ref{tab:statements_engagemet_answers} shows responses from the questionnaire’s section on engagement, where the participants were asked to take a stand on six statements. Though the statements in the questionnaire were originally a five-point Likert scale (strongly disagree, disagree, neutral, agree, and strongly agree), we have synthesized these into a three-point Likert scale for readability (disagree, neutral, and agree). The questionnaire included statements about rewards, curiosity,  challenge, and activity level to investigate the player’s engagement.
 
 \begin{table}[H]
     \centering
@@ -71,7 +71,7 @@ Another participant was not aware of this feature, likely because they did not p
 \footnotetext{Translated from Norwegian}
 
 \subsection{Application Usage Data}
-Data from Firebase Analytics and the database reveals how the players have engaged in the game during the two weeks of testing. The usage data also presents the most used features in the application. 
+Data from Google Analytics and the database reveals how the players have engaged in the game during the two weeks of testing. The usage data also presents the most used features in the application. 
 
 Figure \ref{fig:engagement_daily_users} shows the number of daily users. Meaning the number of users that have opened the application at least once during that day. The data shows a clear tendency that the number of active users was decreasing during the testing period. Day 1 being the peek, and day 13 the lowest point. Both Mondays, days 1 and 8, are the peeks of their respective weeks. Another tendency seems to be that there are fewer active users during the weekends (days 6, 7, and 13). Additionally, it appears to be a correlation between the number of active users and the number of published activities, with day 6 and 14 being the exceptions. The spike on day 14 was likely due to the distribution of the questionnaire that day. 
 
@@ -137,19 +137,34 @@ Figure \ref{fig:engagement_actvities_per_user} shows the distribution of activit
 
 Table \ref{tab:engagement_friend_tracking} reveals how the friend tracking feature has been used. 43 of the 116 activities published utilized friend tracking, which makes 37.1\% of all activities. 14 out of 19 participants used the feature at least once, where the student society group used it more frequently than the classmates, with an average of 2.67 times per participant.
 
+% \begin{table}[H]
+%     \centering
+%     \begin{tabularx}{\textwidth}{|X|c|c|c|}
+%         \hline
+%         & \multicolumn{1}{c|}{\textbf{Student society}}  & \multicolumn{1}{c|}{\textbf{Classmates}} & \multicolumn{1}{c|}{\textbf{Combined}} \\ \hline
+%         Number of activities utilizing friend tracking & 32/80 & 11/36 & 43/116 \\
+%         Percentage of activities using friend tracking & 40.0\% & 30.6\% & 37.1\% \\
+%         Number of participants using it at least once & 10/12 & 4/7 & 14/19 \\
+%         Average use per participant & 2.67 & 1.57 & 2.26 \\
+%         \hline
+%     \end{tabularx}
+%     \caption{The participants’ use of Hover’s friend tracking feature.}
+%     \label{tab:engagement_friend_tracking}
+% \end{table}
+
 \begin{table}[H]
     \centering
     \begin{tabularx}{\textwidth}{|X|c|c|c|}
         \hline
-        & \multicolumn{1}{c|}{\textbf{Student society}}  & \multicolumn{1}{c|}{\textbf{Classmates}} & \multicolumn{1}{c|}{\textbf{Combined}} \\ \hline
-        Number of activities utilizing friend tracking & 32/80 & 11/36 & 43/116 \\
-        Percentage of activities using friend tracking & 40.0\% & 30.6\% & 37.1\% \\
-        Number of participants using it at least once & 10/12 & 4/7 & 14/19 \\
-        Average use per participant & 2.67 & 1.57 & 2.26 \\
+        \multicolumn{1}{|c|}{\textbf{Hover with friend usage}} & \multicolumn{1}{c|}{\textbf{Student society}}  & \multicolumn{1}{c|}{\textbf{Classmates}} & \multicolumn{1}{c|}{\textbf{Combined}} \\ \hline
+        Number of activities utilizing it & 32/80 (40.0\%) & 11/36 (30.6\%) & 43/116 (37.1\%) \\ \hline
+        Number of participants using it at least once & 10/12  (83.3\%) & 4/7 (57.1\%) & 14/19 (73.7\%) \\ \hline
+        Average number of use per participant  & 2.67 & 1.57 & 2.26 \\
         \hline
     \end{tabularx}
     \caption{The participants’ use of Hover’s friend tracking feature.}
     \label{tab:engagement_friend_tracking}
+    \vspace*{2\baselineskip}
 \end{table}
 
 \textbf{Locations} \\

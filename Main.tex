@@ -15,7 +15,7 @@
 \urlstyle{sf}
 \usepackage{color}
 \usepackage{subcaption} 
-\usepackage{appendix}
+\usepackage[toc,page]{appendix}
 \usepackage{chngcntr} % needed for correct table numbering
 \usepackage[
     colorlinks=true,
@@ -74,6 +74,21 @@
 \usepackage{makecell}
 \usepackage{hhline}
 
+
+\usepackage{tocloft}
+\setlength{\cftfignumwidth}{3em} 
+
+
+% Adds space between chapters in List of Figures and List of tables
+\usepackage{etoolbox}
+\preto\figure{%
+  \ifnum\value{figure}=0\addtocontents{lof}{\vskip15pt}\fi
+}
+
+\preto\table{%
+  \ifnum\value{table}=0\addtocontents{tof}{\vskip15pt}\fi
+}
+
 % ----- Sources -----
 \usepackage[natbibapa]{apacite}
 \bibliographystyle{apacite} % citation and reference list style
@@ -103,6 +118,14 @@
 	\fancyhead[R]{Norwegian University of Science and Technology
 	\linebreak       Trondheim, Fall 2020\vspace*{1,5\baselineskip}}
 	\fancyhead[L]{ \includegraphics[width=0.7in]{NtnuLogo.png}}
+}
+
+\fancypagestyle{appendixstyle}{%
+    %pagestyle definition
+    \fancyhead{} % removes page number on top of page
+    \fancyfoot[CO,CE]{\thepage} % page number on right for odd pages and left for even pages in the header
+    \renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
 }
 
 % ----- Document starts here ----- 
@@ -146,6 +169,7 @@
 
 \newpage
 \addtocontents{toc}{\protect\setcounter{tocdepth}{3}} % sets depth of toc to 4, 1.1.1.1
+
 \pagenumbering{arabic} % Starting arabic page numbering
 \setcounter{page}{1} % sets pagecounter to 1
 
@@ -176,7 +200,7 @@
 \subfile{Parts/5Results/ResultsBase}
 
 \vspace*{6\baselineskip}
-\part{Discussion \& Conclusion)}
+\part{Discussion \& Conclusion}
 \label{part:discussion}
 \subfile{Parts/6Discussion/DiscussionBase}
 
@@ -184,22 +208,21 @@
 \newpage
 \renewcommand\refname{References} % name for the reference list
 {\setstretch{1.2} % linespacing for the references
-\addcontentsline{toc}{section}{References} % change references name in the TOC
+\addcontentsline{toc}{part}{References} % change references name in the TOC
 \bibliography{references.bib} % adds references to the document
 }
 
 % Appendix
 \newpage
-\renewcommand{\appendixpagename}{Appendix} % Heading of appendix
-\renewcommand{\appendixtocname}{Appendix} % name of appendix in TOC
-\appendixpage 
-\addappheadtotoc
+\appendix
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\vspace*{6\baselineskip}
+\part*{Appendices}
+\pagestyle{appendixstyle}
+\addcontentsline{toc}{part}{Appendices}
+\renewcommand{\thesection}{\Alph{section}}
 
-\begin{appendices}
-    \subfile{Parts/Appendices/Model}
-    \subfile{Parts/Appendices/PrivacyPolicy}
-    \subfile{Parts/Appendices/Questionnaire}
-    \subfile{Parts/Appendices/InterviewGuide}
-\end{appendices}
+\subfile{Parts/Appendices/AppendicesBase}
 
 \end{document}
