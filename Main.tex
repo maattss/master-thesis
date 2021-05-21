@@ -73,7 +73,10 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{makecell}
 \usepackage{hhline}
+\usepackage{tablefootnote}
 
+
+\newcolumntype{C}{>{\raggedright\arraybackslash}X}
 
 \usepackage{tocloft}
 \setlength{\cftfignumwidth}{3em} 
@@ -86,7 +89,7 @@
 }
 
 \preto\table{%
-  \ifnum\value{table}=0\addtocontents{tof}{\vskip15pt}\fi
+  \ifnum\value{table}=0\addtocontents{lot}{\vskip15pt}\fi
 }
 
 % ----- Sources -----
