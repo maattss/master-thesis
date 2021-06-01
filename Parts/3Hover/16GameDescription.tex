@@ -3,11 +3,12 @@
 In this chapter, a descriptive overview and screenshots from the mobile application will be presented. Figure \ref{fig:nav_bar} shows the bottom navigation bar in Hover, displaying the five main screens: \textit{Feed}, \textit{Challenge}, \textit{Hover}, \textit{Leaderboard}, and \textit{Profile}. Additionally, there are signup and login screens that unauthenticated users face when they open the application.
 
 \begin{figure}[H]
+    \vspace*{0.5\baselineskip}
     \centering
     \includegraphics[width=0.6\textwidth]{Images/GameDescription/NavBar.png}
     \caption{Bottom navigation bar in Hover.}
     \label{fig:nav_bar}
-    \vspace*{-1.5\baselineskip}
+    \vspace*{-\baselineskip}
 \end{figure}
 
 The first time a user opens the application, they are presented with a login screen as seen in Figure \ref{fig:login}. If the person does not have an account, they can navigate to the signup screen and create a new one. The user needs to select their chosen avatar, preferred username, and password to sign up. When they are satisfied with their selection, a new user is created by pressing the “Sign up” button, shown in Figure \ref{fig:signup}.
@@ -17,52 +18,66 @@ The first time a user opens the application, they are presented with a login scr
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{Images/GameDescription/LogIn.png}
+        \includegraphics[width=0.85\textwidth]{Images/GameDescription/LogIn.png}
         \caption{Login screen.}
         \label{fig:login}
     \end{minipage}
     \hspace{0.02\textwidth}
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{Images/GameDescription/SignUp.png}
+        \includegraphics[width=0.85\textwidth]{Images/GameDescription/SignUp.png}
         \caption{Sign up screen.}
         \label{fig:signup}
     \end{minipage}
+    \vspace*{-\baselineskip}
 \end{figure}
-\clearpage
 
 \subsection{Feed Screen}
-\begin{wrapfigure}[26]{r}{15em}
-    \vspace{-3\baselineskip}
-    \includegraphics[width=0.8\linewidth, center]{Images/GameDescription/Feed.png}
-    \caption{Feed screen.}
-    \label{fig:feed}    
-    \vspace{0.5\baselineskip}
-    \includegraphics[width=0.8\linewidth, center]{Images/GameDescription/Notifications.png}
-    \caption{Notifications screen.}
-    \label{fig:notifications}
-\end{wrapfigure}
+\captionsetup[figure]{font=small}
+\begin{wrapfigure}[26]{r}{0.38\textwidth}
 
-The feed is the first of five main screens. It is used to showcase posts of new activities, earned achievements, and completed challenges for all users in the application. A screenshot of the feed is shown in Figure \ref{fig:feed}. At the top, Conrad’s newly published activity, where he has been at “Studentersamfundet” in Trondheim together with Tomine, is shown. Below Bjørn’s new “1000 points in total,” bronze achievement is displayed. The bottom post announces Tarzan as the winner of a challenge against Kimmy, Herman, and Morten.
+    \vspace{-3.3\baselineskip}
+    \hspace*{0.06\textwidth}
+    \begin{minipage}{0.31\textwidth}
+        \includegraphics[width=\textwidth]{Images/GameDescription/Feed.png}
+        \caption{Feed screen.}
+        \label{fig:feed}    
+        \vspace{0.5\baselineskip}
+    \end{minipage}
+    
+    \hspace*{0.06\textwidth}
+    \begin{minipage}{0.31\textwidth}
+        \includegraphics[width=\textwidth]{Images/GameDescription/Notifications.png}
+        \caption{Notifications screen.}
+        \label{fig:notifications}
+    \end{minipage}
+\end{wrapfigure}
+\captionsetup[figure]{font=normal}
+
+The feed is the first of five main screens. It is used to showcase posts of new activities, earned achievements, and completed challenges for all users in the application. A screenshot of the feed is shown in Figure \ref{fig:feed}. At the top, Conrad’s newly published activity, where he has been at “Studentersamfundet” in Trondheim together with Tomine, is shown. Below is Bjørn’s new “1000 points in total” bronze achievement. The bottom post announces Tarzan as the winner of a challenge against Kimmy, Herman, and Morten.
 
 The user can also show their tribute to elements in the feed by pressing the “clap emoji.” In the figure, we can see that the user has reacted to Tarzan’s challenge win.
 
 \subsubsection{Notifications List}
 A closer look at the top right corner of the feed screenshot (Figure \ref{fig:feed}) reveals a notification icon with a badge illustrating two new notifications. When pressing this button, the user will be directed to a new page, giving an overview of all notifications (see Figure \ref{fig:notifications}). The items are sorted by the time and date and categorized whether or not they are read. New ones are listed at the top, while earlier ones are displayed below. Pressing the various items redirects the user to a specific part of the application relevant to the type of notification.
 
+\clearpage
 \subsection{Challenge Screen}
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.40\textwidth}
+    \centering
     \vspace{-0.6\baselineskip}
-    \includegraphics[width=0.8\linewidth, center]{Images/GameDescription/Challenge.png}
+    \hspace*{0.03\textwidth}
+    \includegraphics[width=0.37\textwidth]{Images/GameDescription/Challenge.png}
     \caption{Challenge screen.}
     \label{fig:challenge}
 \end{wrapfigure}
+
 The challenge screen allows players to see their challenge progress, pending invites, and create new challenges. A challenge is a user-defined competition between two or more players where the goal is to meet a set of requirements before a specified date.  An example is the \textit{score in category} challenge, where the goal is to get a specified amount of points in a specific category before a chosen date, determined by the creator. 
 
 Figure \ref{fig:challenge} shows an example of how the challenge screen may look. In this screen, players can see the challenges they are invited to and those they are currently participating in. Both the pending invites and the ongoing challenges include a description of the challenge rules.
 
 \subsubsection{Creating a New Challenge}
-As mentioned above, players can create new challenges. Figure \ref{fig:create_challenge_flow} illustrate this process. The first step is to choose one or more opponents, as seen in Figure \ref{fig:challenge_choose_opponents}. Next, the type of challenge is selected (Figure \ref{fig:challenge_type}). Then the challenge rules are set, before an overview is presented and the process is completed (figures \ref{fig:challenge_rules} and \ref{fig:challenge_overview}). When pressing the “Create challenge” button, the challenged users will get a new notification to let them know they have been invited.
+As mentioned above, players can create new challenges. Figure \ref{fig:create_challenge_flow} illustrates this process. The first step is to choose one or more opponents, as seen in Figure \ref{fig:challenge_choose_opponents}. Next, the type of challenge is selected (Figure \ref{fig:challenge_type}). Then the challenge rules are set, before an overview is presented and the process is completed (figures \ref{fig:challenge_rules} and \ref{fig:challenge_overview}). When pressing the “Create challenge” button, the challenged users will get a new notification to let them know they have been invited.
 
 \begin{figure}[ht]
     \centering
@@ -139,34 +154,41 @@ When the user is ready to publish the activity, the stop button is pressed, and 
 The leaderboard introduces the ability for the users to compare themselves against others. Figure \ref{fig:leaderboard} shows an example where the top 10 players are listed. The leaderboard can be filtered by both time and category, depending on the user’s interest. Streaks, illustrating the number of days in a row a user has published an activity, are also displayed. Additionally, the rows in the list can also be pressed to navigate to that player’s profile.
 
 \begin{figure}[H]
-    \includegraphics[width=0.4\textwidth, center]{Images/GameDescription/Leaderboard.png}
+    \vspace*{0.5\baselineskip}
+    \includegraphics[width=0.45\textwidth, center]{Images/GameDescription/Leaderboard.png}
     \caption{Leaderboard screen.}
     \label{fig:leaderboard}
 \end{figure}
 \clearpage
 
 \subsection{Profile Screen}
-\begin{wrapfigure}{r}{0.4\textwidth}
-    \vspace*{-3.3\baselineskip}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace*{-2\baselineskip}
     \centering
-    \includegraphics[width=0.70\linewidth, center]{Images/GameDescription/FullProfile.png}
+    \hspace*{0.09\textwidth}
+    \begin{minipage}{0.41\textwidth}
+    \includegraphics[width=\textwidth]{Images/GameDescription/FullProfile.png}
     \caption{Profile screen.}
     \label{fig:profile}
     \vspace*{-2\baselineskip}
+    \end{minipage}
 \end{wrapfigure}
+
 
 Figure \ref{fig:profile} shows a profile screen example, displaying an overview of user-related data. The profile link in the bottom bar directs to the logged-in user’s profile page. However, as described earlier, other user’s profiles can be navigated to in particular parts of the application, such as the leaderboard.
 
 At the top of the screen, the name, avatar, and a short biography are found. The user can customize this information in the settings (described below). Underneath the top card, the profile is divided into three main sections: \textit{Achievements}, \textit{Score}, and \textit{Activities}.
 
+\clearpage
 The achievements section displays all earned achievements, with the newest one on the left. The horizontal list is scrollable to view all achievements the user has obtained. Pressing the “see more” button reveals a new page (see Figure \ref{fig:achievements}) with a more extensive overview. Here, the user can see all achievements, including the progress towards the one they have not received yet.
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-    \vspace{-1.8\baselineskip}
-    \includegraphics[width=0.7\linewidth, center]{Images/GameDescription/Achievements.png}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.40\textwidth]{Images/GameDescription/Achievements.png}
     \caption{Achievements page.}
     \label{fig:achievements}
-\end{wrapfigure}
+\end{figure}
 
 Below achievements, the user’s score is displayed. The overview consists of points in each category, together with a total, summarizing the points in all categories. Last, a list of all the current user’s previous activities is displayed. This section is a convenient tool to get an overview of one person’s activities instead of scrolling through all activities, achievements, and completed challenges in the feed.
 
@@ -176,10 +198,10 @@ Below achievements, the user’s score is displayed. The overview consists of po
 In the top right corner of Figure \ref{fig:profile}, there is a button for navigating to the settings in the application. As seen in Figure \ref{fig:settings}, the screen includes various less important functions such as edit profile (name, avatar, and biography), suggest a new location, give feedback or read legal information.
 
 \begin{figure}[H]
-    \includegraphics[width=0.4\linewidth, center]{Images/GameDescription/Settings.png}
+\centering
+    \includegraphics[width=0.5\textwidth]{Images/GameDescription/Settings.png}
     \caption{Settings menu.}
     \label{fig:settings}
-    \vspace*{-2\baselineskip}
 \end{figure}
 
 \subsection{Summary}

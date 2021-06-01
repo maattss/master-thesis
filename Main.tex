@@ -60,7 +60,7 @@
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 
-% ----- Figures and tables ----- 
+% ----- Figures and tables and lists ----- 
 \usepackage{fancyhdr}
 \usepackage{subfiles}
 \usepackage{array}
@@ -75,11 +75,13 @@
 \usepackage{hhline}
 \usepackage{threeparttable}
 
+\usepackage{enumitem}
 
-
+\usepackage{stackengine}
 \usepackage{tocloft}
 \setlength{\cftfignumwidth}{3em} 
 
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 % Adds space between chapters in List of Figures and List of tables
 \usepackage{etoolbox}
