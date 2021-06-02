@@ -36,8 +36,9 @@ Designing the software architecture is a crucial phase in the development of eve
 As illustrated in Figure \ref{fig:architecture_overview}, the system consists of four main parts: the application, a Hasura storage solution, the Firebase backend, and Expo for handling notifications and over-the-air (OTA) updates. The communication between the parts, illustrated with the dotted lines, is encrypted and secured via HTTPS. The arrow shows which direction the information is mainly traveling.
 
 \begin{figure}[H]
+ \vspace{-0.4\baselineskip}
     \centering
-    \includegraphics[width=0.58\textwidth]{Images/GameDevelopment/ArchitectureOverview.png}
+    \includegraphics[width=0.62\textwidth]{Images/GameDevelopment/ArchitectureOverview.png}
     \caption{Simplified architectural overview.}
     \label{fig:architecture_overview}
     \vspace{-\baselineskip}
@@ -53,7 +54,7 @@ Hasura was used as the storage solution in this project. The solution consists o
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/GameDevelopment/HasuraAuth.png}
+    \includegraphics[width=0.9\textwidth]{Images/GameDevelopment/HasuraAuth.png}
     \caption{Hasura JWT authorization flow \citep{hasura_authentication_2021}.}
     \label{fig:hasura_auth}
 \end{figure}
