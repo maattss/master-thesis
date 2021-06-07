@@ -11,7 +11,14 @@
 \usepackage[export]{adjustbox}
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb, amsthm} % Mathematical packages
+
+% adds space between number and caption in LoF and LoT
+\usepackage{tocloft}
+\setlength{\cftfignumwidth}{3em} 
+\setlength{\cfttabnumwidth}{3em}
+
 \usepackage{parskip} % Removing indenting in new paragraphs
+
 \urlstyle{sf}
 \usepackage{color}
 \usepackage{emptypage}
@@ -51,15 +58,33 @@
 
 
 % ----- Sections -----
-\titleformat*{\section}{\LARGE\bfseries} % \section heading
+\newcommand\chaptername{Chapter}
+\titleformat{\section}[display]
+  {\large\bfseries}
+  {\chaptername\ \thesection}
+  {0pt}
+  {\LARGE}
+\titlespacing*{\section}
+  {0pt}{0pt}{20pt}
+  
 \titleformat*{\subsection}{\Large\bfseries} % \subsection heading
 \titleformat*{\subsubsection}{\large\bfseries} % \subsubsection heading
+%\titleformat*{\subsubsubsection}{\normalsize\bfseries} % \subsubsection heading
+%\titlespacing*{\subsubsubsection}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 % next three lines creates the \paragraph command with correct heading 
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+{0pt}{3.25ex plus 1ex minus .2ex}{0ex}
 
+\titleformat{\part}[display]
+  {\LARGE\bfseries}
+  {\partname\ \thepart}
+  {0pt}
+  {\Huge}
+\titlespacing*{\part}
+  {0pt}{50pt}{20pt}
 
 % ----- Figures and tables and lists ----- 
 \usepackage{fancyhdr}
@@ -80,17 +105,13 @@
 \usepackage{multicol}
 
 \usepackage{stackengine}
-\usepackage{tocloft}
-\setlength{\cftfignumwidth}{3em} 
 
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 % Adds space between chapters in List of Figures and List of tables
 \usepackage{etoolbox}
 \preto\figure{%
   \ifnum\value{figure}=0\addtocontents{lof}{\vskip15pt}\fi
 }
-
 \preto\table{%
   \ifnum\value{table}=0\addtocontents{lot}{\vskip15pt}\fi
 }
@@ -98,27 +119,27 @@
 
 % formatting for new parts and sections
 \pretocmd{\part}{\cleardoublepage\thispagestyle{empty}\vspace*{6\baselineskip}}{}{}
-\pretocmd{\section}{\clearpage}{}{} % change to cleardoublepage for printing as book
+\pretocmd{\section}{\clearpage\thispagestyle{empty}}{}{} % change to cleardoublepage for printing as book
 
 % ----- Sources -----
 \usepackage[natbibapa]{apacite}
 \bibliographystyle{apacite} % citation and reference list style
-\def\biblio{\clearpage\bibliographystyle{apacite}\bibliography{references.bib}} % defines the \biblio command used for referencing in subfiles - DO NOT CHANGE
+\def\biblio{\clearpage\bibliographystyle{apacite}\bibliography{references.bib}} 
 
-% old citation style
-%\usepackage{natbib}
-%\bibliographystyle{apaeng} % citation and reference list style
-%\def\biblio{\clearpage\bibliographystyle{apaeng}\bibliography{references.bib}} % defines the \biblio command used for referencing in subfiles - DO NOT CHANGE
 
+% Footnote
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 
 % ----- Header and footer -----
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+
 \fancypagestyle{general}{%}
-\fancyhead[RO,LE]{\thepage} % page number on right for odd pages and left for even pages in the header
-\fancyhead[RE,LO]{\nouppercase{\rightmark}} % chapter name and number on the right for even pages and left for odd pages in the header
-\renewcommand{\headrulewidth}{0.5pt} % sets thickness of header line
-\fancyfoot{} % removes page number on bottom of page
+    \fancyhead[RO,LE]{\thepage} % page number on right for odd pages and left for even pages in the header
+    \fancyhead[RE,LO]{\nouppercase{\rightmark}} % chapter name and number on the right for even pages and left for odd pages in the header
+    \renewcommand{\headrulewidth}{0.5pt} % sets thickness of header line
+    \fancyfoot{} % removes page number on bottom of page
 }
 
 % ----- Header of the frontpage ----- 
@@ -134,9 +155,9 @@
 }
 
 \fancypagestyle{preamble}{%
-\fancyhead{} % chapter name and number on the right for even pages and left for odd pages in the header
-\renewcommand{\headrulewidth}{0pt} % sets thickness of header line
-\fancyfoot[C]{\thepage} % removes page number on bottom of page
+    \fancyhead{} % chapter name and number on the right for even pages and left for odd pages in the header
+    \renewcommand{\headrulewidth}{0pt} % sets thickness of header line
+    \fancyfoot[C]{\thepage} % removes page number on bottom of page
 }
 
 \fancypagestyle{appendixstyle}{%
@@ -180,18 +201,18 @@
 
 \cleardoublepage
 %\newpage
-{\setstretch{1.0} % line spacing for the list
+{\setstretch{1.1} % line spacing for the list
 \tableofcontents
 }
 
+%\cleardoublepage %switch befor print
 \newpage
-
-{\setstretch{1.0} 
+{\setstretch{1.1} 
 \listoffigures}
 
+%\cleardoublepage %switch befor print
 \newpage
-
-{\setstretch{1.0} 
+{\setstretch{1.1} 
 \listoftables}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{3}} % sets depth of toc to 4, 1.1.1.1
