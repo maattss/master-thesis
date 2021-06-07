@@ -5,17 +5,17 @@ In this chapter, the tools we used to develop Hover and the process of selecting
 \subsection{Technology Selection Process}
 Chapter \ref{chap:technology_review} gave an overview of relevant technologies used as the basis for the selection process. There were essentially two main choices we needed to undertake: Decide what mobile application development approach and what backend solution we wanted to adopt.
 
-Our decision was to choose a cross-platform framework for developing the mobile application and a Backend as a Service (BaaS) solution for managing data, users, and analytics. Selecting a cross-platform framework for developing the mobile application was based on the opportunity to create a game that could target as many people as possible. Since the development time in the master’s thesis period is limited, a BaaS solution was chosen because of its simplicity.
+Our decision was to choose a cross-platform framework for developing the mobile application and a Backend as a Service (BaaS) solution for managing data, users, and analytics. Selecting a cross-platform framework for developing the mobile application was based on the opportunity to create a game that could target as many people as possible. Since the development time in a master’s thesis period is limited, a BaaS solution was chosen because of its simplicity.
 
 After choosing our mobile development and backend approach, we needed to select the specific tools we wanted to utilize. Three main evaluation criteria guided this process:
 
 \textbf{Support for required functionality:} The chosen tools needed to support the necessary functionality in Hover. Location tracking, map integration, and authentication are some of these requirements.
 
-\textbf{Previous experience:} Prior knowledge of a tool counted positive because it will increase the development speed. 
+\textbf{Previous experience:} Prior knowledge of a tool counts positive because it will increase the development speed. 
 
 \textbf{Maturity:} A tool that has been tested, experienced, and used in many applications is positive. It is also essential that the solution is undergoing active development and maintenance.
 
-Based on the selection criteria, selected React Native as a mobile application framework and a combination of Hasura and Firebase as BaaS providers were selected. 
+Based on the criteria, we selected \textit{React Native} with \textit{Expo} as the mobile application framework and a combination of \textit{Hasura} and \textit{Firebase} for BaaS providers. 
 
 \subsection{React Native as Mobile Development Framework}
 React Native is a cross-platform framework developed by Facebook \citep{occhino_react_2015}. One of the main differences between React Native and other similar frameworks is its use of native components. A button declared in a React Native application will be presented as an Android-type button when the application is run on Android and an iOS-type button when it is used on iOS. Most other frameworks have a different approach where the application provides a common Android and iOS application experience. In this way, a React Native application feels more like a native application than other frameworks like Flutter and Ionic. 
@@ -23,11 +23,11 @@ We decided to use React Native in combination with \href{https://expo.io}{Expo}.
 
 \textbf{Support for required functionality:} Libraries and support for the functionality we needed to develop Hover, including location tracking and map integration, exists in React Native.
 
-\textbf{Previous experience:} We do not have much experience with mobile application development, except for some limited experimentation and prototyping in conjunction with the technology review process. However, we have experience working with React, and this is a definite plus when developing using React Native.
+\textbf{Previous experience:} We do not have much experience with mobile development, except for some limited experimentation and prototyping in conjunction with the technology review process. However, we have experience working with React, and this is a definite plus when developing using React Native.
 
-\textbf{Maturity:} React Native is a mature mobile development framework, and a handful of large companies uses it for their mobile applications. The framework is open-source and under active development and maintenance. Because React Native is based on React and JavaScript, the framework also has access to \href{https://www.npmjs.com}{NPM}’s extensive collection of packages of open-source code.
+\textbf{Maturity:} React Native is a mature mobile development framework, and a handful of large companies use it for their mobile applications. The framework is open-source and under active development and maintenance. Because React Native is based on React and JavaScript, the framework also has access to \href{https://www.npmjs.com}{NPM}’s extensive collection of packages of open-source code.
 
-Although we chose React Native as our development framework, other frameworks such as Flutter and Xamarin would presumably also have been great options. In summary, the decision was based on a combination of minor differences, where our previous experience with React was the deciding factor.
+Although we chose React Native as our development framework, other frameworks such as Flutter and Xamarin would also have been great options. In summary, the decision was based on a combination of minor differences, where our previous experience with React was the deciding factor.
 
 \subsection{Combining Firebase and Hasura as BaaS}
 Combining Firebase and Hasura as BaaS

@@ -26,7 +26,7 @@ In the leaderboard, players can see and compare their ranking in the game. The p
 
 The scores are also visible on the players’ profiles. Figure \ref{fig:profile} in Chapter \ref{chap:game_description}, shows how the categories are used as score segments along with the total score. By dividing the categories into different score segments, players can see and compare the scores that matter to them. For instance, players that do not exercise or go to a university will probably not be interested in these scores.
 
-The point system also has a boosting feature that enables cooperation. Players can \textit{hover} together to get double points during their session. This feature can motivate players to do activities together, engage other players to play, and positively affect the player’s enjoyment. 
+The point system also has a boosting feature that enables cooperation. Players can hover together to get double points during their session. This feature can motivate players to do activities together, engage other players to play, and positively affect the player’s enjoyment. 
 
 The streak system is the second score system in Hover. It counts the number of days in a row that a player has been hovering and is independent of the player’s accumulated points. This particular score system builds on the player’s long-term commitment because the streak is lost if a player goes a day without hovering. The goal of the streak system is to encourage users to do something beneficial every day. The streaks are visible on the leaderboard next to the player’s name, as seen in Figure \ref{fig:leaderboard_element}.
 
@@ -35,7 +35,7 @@ Another important form of reward is achievement systems. In Hover, achievements 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{Images/GameDesign/achievement_levels.png}
+    \includegraphics[width=0.6\textwidth]{Images/GameDesign/achievement_levels.png}
     \caption{Achievement’s difficulty level.}
     \label{fig:achievement_levels}
     \vspace*{-1\baselineskip}
@@ -69,10 +69,10 @@ When players complete an activity or invite others to a challenge, they are prom
 \end{figure}
  
 \subsubsection{Reward Design considerations}
-\citeauthor{wang_game_2011}’s article on reward systems presents seven design considerations for developing reward systems. Four of these are directly relevant to us during the development of Hover:
+\citeauthor{wang_game_2011}’s article on reward systems presents seven design considerations for developing reward systems. Four of these was directly relevant to us during the development of Hover:
 
 \paragraph*{Balance} 
-Time spent on activities and the points given needs to be balanced. The players will experience the game as frustrating if not enough points are rewarded and boring if too many points are rewarded for the activities they complete. As mentioned above, it is easier to spend eight hours on campus than be at a sports center training for eight hours. Thus the points should be distributed based on the geofence category (culture, education, exercise, and social). A consequence of this is that the points will not change based on the experience but rather on effort. Hence, experienced players might feel that it is easier to earn points than beginners because there is no increase in difficulty.
+Time spent on activities and the points given needs to be balanced. The players will experience the game as frustrating if not enough points are rewarded and boring if too many points are rewarded, for the activities they complete. As mentioned above, it is easier to spend eight hours on campus than be at a sports center training for eight hours. Thus the points should be distributed based on the geofence category (culture, education, exercise, and social). A consequence of this is that the points will not change based on the experience but rather on effort. Hence, experienced players might feel that it is easier to earn points than beginners because there is no increase in difficulty.
 
 The balance between player experience and difficulty is incorporated in the achievement system. The three achievement levels, \textit{bronze}, \textit{silver}, and \textit{gold}, are designed to be increasingly more difficult to earn. This balance gives the player an incentive to strive for the next achievement level because it is not too easy nor too hard to achieve. 
 
@@ -100,7 +100,7 @@ Uncertainty and secrecy are necessary to impose curiosity in a game. In Hover, t
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Images/GameDesign/unachieved_levels.png}
+    \includegraphics[width=0.7\textwidth]{Images/GameDesign/unachieved_levels.png}
     \caption{Progress towards new achievements.}   
     \label{fig:unachieved_levels}
     \vspace*{-\baselineskip}
@@ -118,7 +118,7 @@ The \textit{sociability} dimension focuses on community-oriented players. Hover 
 
 Though the dimension of \textit{exploring} is not too prominent in Hover, viewing other player’s activities, exploring unachieved achievements, and finding new locations on the map can be regarded as exploring.
 
-The leaderboard in Hover enables the dimension of \textit{domination} because some players enjoy dominating the leaderboard. Many MMORPGs have various aspects of domination, such as provocative behavior. However, domination for players in Hover is more concerned with getting more points than their friends. Some players might only take an interest in dominating specific categories, such as education and health. For that reason, enabling leaderboard-filtering on categories and time intervals can enhance the experience of domination.
+The leaderboard in Hover enables the dimension of \textit{domination} because some players enjoy dominating the leaderboard. Many MMORPGs have various aspects of domination, such as provocative behavior. However, domination for players in Hover is more concerned with getting more points than their friends. Some players might only take an interest in dominating specific categories, such as education and health. For that reason, enabling leaderboard-filtering on categories and time intervals enhances the experience of domination.
 
 \subsection{Use of Malone’s Theories on Intrinsic Motivation}
 Malone’s “What Makes Things Fun to Learn?” article presents three essential elements in his article: challenge, fantasy, and curiosity. All of them are, to some degree, related to Hover’s game design.
@@ -139,7 +139,7 @@ Another aspect of the game, which is not mentioned in the reward systems section
     \end{minipage}
 \end{wrapfigure}
 
-Players do not precisely know their progress. Instead, the description and the progress bar give the player a clear goal and indicate their progress (see Figure \ref{fig:challenge}  in the previous chapter). The progress is also not updated before the player publishes a new activity. Therefore, players cannot be entirely sure if they are leading the in-game challenge or not. Hiding details and information like that gives uncertain outcomes, which balances the difficulty. 
+Players do not precisely know their progress. Instead, the description and the progress bar give the player a clear goal and indicate their progress (see Figure \ref{fig:challenge} in Chapter \ref{chap:game_description}). The progress is also not updated before the player publishes a new activity. Therefore, players cannot be entirely sure if they are leading the in-game challenge or not. Hiding details and information like that gives uncertain outcomes, which balances the difficulty. 
 
 \paragraph*{Fantasy}  
 Fantasy in games makes them more appealing. In Hover, players have an avatar representing them. The avatars are randomly generated; however, players can regenerate until they find an avatar they like. Examples of avatars are illustrated in Figure \ref{fig:avatar_collage}. The avatar creates an extrinsic fantasy where players accumulate points for their avatar.
@@ -158,7 +158,7 @@ Curiosity is a central element in game design used to encourage exploration and 
 
 Sensory curiosity is mentioned as the other category of curiosity. Particular graphical elements, sounds, and similar attract the player’s attention. In Hover, sensory curiosity is present as decoration and as a representation system. Icons, emojis, and colors are used throughout the application to decorate the game elements and feedback messages. 
 
-For the representation system, progress bars are used to represent the progress toward the next point while tracking; hence the progress bar represents the time it takes between points, instead of using text. If the player moves outside the geofence, the progress bar stops moving to illustrate that the tracking has paused (see Figure \ref{fig:tracking_progressbar_paused}).
+For the representation system, progress bars are used to represent the progress toward the next point while tracking. Hence the progress bar represents the time it takes between points, instead of using text. If the player moves outside the geofence, the progress bar stops moving to illustrate that the tracking has paused (see Figure \ref{fig:tracking_progressbar_paused}).
 
 \begin{figure}[H]
     \centering
@@ -177,7 +177,7 @@ For the representation system, progress bars are used to represent the progress 
     \vspace{-0.5\baselineskip}
 \end{figure}
 
-Furthermore, to start tracking, players have to be located within a geofence. To indicate that tracking is restricted to valid hover zones, gray and green buttons are used to indicate whether this functionality is disabled or not. 
+Furthermore, to start tracking, players have to be located within a geofence. To indicate that tracking is restricted to valid hover zones, gray and green buttons are used to illustrate whether this functionality is disabled or not. 
 
 \begin{figure}[H]
     \centering
@@ -206,7 +206,7 @@ Another aspect related to the concept of challenge is the in-game challenges tha
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.68\textwidth]{Images/GameDesign/challenge_description_close.png}
+    \includegraphics[width=0.6\textwidth]{Images/GameDesign/challenge_description_close.png}
     \caption{Challenge description, generated from the rules defined by the player.}
     \label{fig:challenge_description_close}
     \vspace{-0.5\baselineskip}
@@ -214,7 +214,7 @@ Another aspect related to the concept of challenge is the in-game challenges tha
 
 \paragraph*{Control} 
 Control is also a central element of game design; players should feel a sense of control over their actions in the game and transfer their intentions to in-game behavior. 
-To incorporate the element of control in Hover, it was essential to design and build intuitive user interfaces. We followed common design principles and patterns. Examples include utilizing a horizontal process flow when creating challenges and tracking, see figures \ref{fig:create_challenge_flow} and \ref{fig:tracking_flow} in Chapter \ref{chap:game_description}. Utilizing such a flow can provide a sense of progress. Additionally, players cannot proceed to the next step in the flow before all sub-steps are finished, indicated by using disabled “Next”-buttons.
+To incorporate the element of control in Hover, it was essential to design and build intuitive user interfaces. We followed common design principles and patterns. Examples include utilizing a horizontal process flow when creating challenges and tracking (see figures \ref{fig:create_challenge_flow} and \ref{fig:tracking_flow} in Chapter \ref{chap:game_description}). Utilizing such a flow can provide a sense of progress. Additionally, players cannot proceed to the next step in the flow before all sub-steps are finished, indicated by using disabled “Next”-buttons.
 
 Furthermore, \citet{sweetser_gameflow_2005} also suggests that players should be able to recover from their mistakes; thus, the game should support this. If a player mistakenly kills the app while hovering, Hover automatically resumes tracking on restart. This particular functionality lets players recover from a mistake that would otherwise cause players to lose their activity and disturb the gameplay. Another mechanism that lets players recover from mistakes is that players may resume or discard their activities when tracking is stopped, as illustrated in Figure \ref{fig:activity_control}. 
 
@@ -256,7 +256,7 @@ Feedback is essential while hovering to ensure that the players understand wheth
     \label{fig:friend_tracking}
 \end{figure}
 
-In addition to in-game feedback, players are given push notifications on their location status (inside or outside a geofence), updates on challenges (invites, responses, wins, and loses), and rewards (achievements and likes). These push notifications are decorated with emojis to be more playful and informative. The third notification in Figure \ref{fig:push_notification} gives direct feedback that suggests that the player should move back into the area. The message is also an indirect reminder for them to publish their activity when they leave a location.
+In addition to in-game feedback, players are given push notifications on their location status (inside or outside a geofence), updates on challenges (invites, responses, wins, and loses), and rewards (achievements and reactions). These push notifications are decorated with emojis to be more playful and informative. The third notification in Figure \ref{fig:push_notification} gives direct feedback that suggests that the player should move back into the area. The message is also an indirect reminder for them to publish their activity when they leave a location.
 
 \paragraph*{Social Interaction} 
 Interaction between players was discussed in the social purpose part of the reward systems section and in the player types section. Social interaction in games increases player engagement and fun in a game, enhancing the purpose of the game. Hover includes competitive and cooperative interaction through the challenges and friend-tracking features. In addition to this, players can interact by showing support through reacting to each others’ activities and achievements. The game’s meaning is also improved by including the possibilities to share achievement and compare points against friends.
