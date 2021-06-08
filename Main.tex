@@ -119,7 +119,7 @@
 
 % formatting for new parts and sections
 \pretocmd{\part}{\cleardoublepage\thispagestyle{empty}\vspace*{6\baselineskip}}{}{}
-\pretocmd{\section}{\clearpage\thispagestyle{empty}}{}{} % change to cleardoublepage for printing as book
+\pretocmd{\section}{\cleardoublepage\thispagestyle{empty}}{}{} % change to cleardoublepage for printing as book
 
 % ----- Sources -----
 \usepackage[natbibapa]{apacite}
@@ -208,13 +208,13 @@
 \tableofcontents
 }
 
-%\cleardoublepage %switch befor print
-\newpage
+\cleardoublepage %switch befor print
+%\newpage
 {\setstretch{1.1} 
 \listoffigures}
 
-%\cleardoublepage %switch befor print
-\newpage
+\cleardoublepage %switch befor print
+%\newpage
 {\setstretch{1.1} 
 \listoftables}
 
